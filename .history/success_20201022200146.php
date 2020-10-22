@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
-    <link rel="stylesheet" href="templates/gameOver.css">
+    <link rel="stylesheet" href="templates/success.css">
     <link rel="stylesheet" href="templates/general.css">
 </head>
 <body>
@@ -18,14 +18,15 @@
             <div id="img">
                 
             </div>
-            <div id="scroll">
-                <span id="game-over" >
-                    GAME OVER
+            <div id="scroll1">
+                <span id="congrats" >
+                    NIVEL SUPERADO
                 </span>
              </div>
         </div>
-        <div id="button_home">
+        <div id="button_play">
             <button><h3>Inicio</h3></button>
+            <button><h3>Siguiente Nivel</h3></button>
         </div>
         <div id="name_introduction">
 
