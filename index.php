@@ -17,7 +17,7 @@
         </div>
         <div class="container">
             <div id="img">
-                <img src="templates\assets\home_img.png" alt="Simon Game">
+                <img src="templates/assets/home_img.png" alt="Simon Game">
             </div>
             <div id="manual">
                 <p id="manual_paragraph">
