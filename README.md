@@ -1,5 +1,5 @@
 # RavenclawSimon
-_RavenvlawSimon es un juego que te permitirá trabajar la memoria. Debees estar atento al tiempo que te da el respectivo nivel y memorizar los cuadrados que aparecerán seleccionados de un color, para después seleccionar estos mismos cuando se apaguen. Si los seleccionas todos ganas, sino Game Over jugador._
+_RavenvlawSimon es un juego que te permitirá trabajar la memoria. Debes estar atento al tiempo que te da el respectivo nivel y memorizar los cuadrados que aparecerán seleccionados de un color, para después seleccionar estos mismos cuando se apaguen. Si los seleccionas todos ganas, sino Game Over jugador._
 
 ### Pre-requisitos 📋
 _RavenclawSimon no es un juego que necesite muchos recursos. Podrás jugar en cualquier ordenador que tenga acceso al terminal y tenga un navegador actualizado, ya sea Google Chrome, Opera, Firefox, etc. Aquí teneis los respectivos enlaces por si quereis instalaros alguno de los mencionados anteriormente:_
@@ -24,13 +24,13 @@ _Estos son los pasos que deberas seguir para jugar sin problema a este maravillo
 3. Introduce el usuario y la contraseña de GitHub (si es necesario), nosotros en ningun momento veremos dichos datos.
 ```
 ```
-4. Ves al navegador mencionado en los requisitos y en tu buscador pon localhost
+4. Ves al navegador mencionado en los requisitos y en tu buscador pon "localhost"
 ```
 ```
-5. Segudiamente te saldra una estructura de carpetas y tendras que elegir la que se llame RavenclawSimon.
+5. Seguidamente te saldrá una estructura de carpetas y tendrás que elegir la que se llame "RavenclawSimon".
 ```
 ```
-6. El ultimo y el paso mas inmportante, DISFRUTA!!!
+6. Por último, y el paso mas inmportante, DISFRUTA!!!
 ```
 ## Construido con 🛠️
 * [GitHub](https://github.com/) - El gestor de versiones utilizado.
