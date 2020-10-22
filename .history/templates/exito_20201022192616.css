@@ -1,0 +1,25 @@
+header,
+footer {
+  background-color: #0e1a40;
+}
+
+body {
+  height: 100%;
+  background-color: #222f5b;
+  text-align: center;
+}
+
+#scroll1 {
+  background: #5d5d5d;
+  direction: ltr;
+  text-align: center;
+}
+
+#congrats {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 150px;
+  font-family: "Harry Potter";
+  text-align: center;
+  color: #ffffff;
+}
