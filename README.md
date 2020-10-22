@@ -9,12 +9,12 @@ https://www.google.com/intl/es_es/chrome/
 ```
 https://www.mozilla.org/es-ES/firefox/new/
 ```
+```
 https://www.opera.com/es-419/download
 ```
 ### Instalación 🔧
 _Estos son los pasos que deberas seguir para jugar sin problema a este maravilloso juego:_
 ```
-<<<<<<< HEAD
 1. Dirigete a la carpeta public de apache /var/Www/html en el caso de ubuntu. En la cual instalaras el juego.
 ```
 ```
@@ -31,20 +31,6 @@ _Estos son los pasos que deberas seguir para jugar sin problema a este maravillo
 ```
 ```
 6. El ultimo y el paso mas inmportante, DISFRUTA!!!
-=======
-1. Dirígete a la carpeta public de Apache /var/www/html en el caso de Ubuntu. En la cual instalaras el juego.
-``````
-2. Abre el terminal, dirígete a esa carpeta y copia el siguiente codigo: git clone https://github.com/AWS2/welcome.git
-``````
-3. Introduce el usuario y la contraseña de GitHub (si es necesario). Nosotros en ningun momento veremos dichos datos.
-``````
-4. Ves al navegador mencionado en los requisitos y en tu buscador escribe localhost.
-`````
-5. Seguidamente, aparecerá una estructura de carpetas y tendras que elegir la que se llame "RavenclawSimon".
-```
-`````
-6. Por último, y el paso mas inmportante, DISFRUTA!!!
->>>>>>> 6fbb33db8203d671ece75edc7d02725af20b616d
 ```
 ## Construido con 🛠️
 * [GitHub](https://github.com/) - El gestor de versiones utilizado.
