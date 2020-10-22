@@ -14,16 +14,20 @@ https://www.opera.com/es-419/download
 _Estos son los pasos que deberas seguir para jugar sin problema alguno nuestro maravilloso juego:_
 ```
 1. Dirigete a la carpeta public de apache /var/Www/html en el caso de ubuntu. En la cual instalaras el juego.
-``````
+```
+```
 2. Abre un terminal en esa carpeta y copia el siguiente codigo: git clone https://github.com/AWS2/welcome.git
-``````
+```
+```
 3. Introduce el usuario y la contraseña de GitHub (si es necesario), nosotros en ningun momento veremos dichos datos.
-``````
+```
+```
 4. Ves al navegador mencionado en los requisitos y en tu buscador pon localhost
-`````
+```
+```
 5. Segudiamente te saldra una estructura de carpetas y tendras que elegir la que se llame RavenclawSimon.
 ```
-`````
+```
 6. El ultimo y el paso mas inmportante, DISFRUTA!!!
 ```
 ## Construido con 🛠️
