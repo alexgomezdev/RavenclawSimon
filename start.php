@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="templates/index.css">
+<link rel="stylesheet" href="templates/lib.css">
 <link rel="stylesheet" href="templates/start.css">
 <div class=" maxwd just-cont-center ds-flex">
     <div>
