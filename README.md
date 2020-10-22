@@ -11,7 +11,7 @@ https://www.mozilla.org/es-ES/firefox/new/
 ```
 https://www.opera.com/es-419/download
 ```
-### Instalación 🔧:
+### Instalación 🔧
 _Estos son los pasos que deberas seguir para jugar sin problema a este maravilloso juego:_
 ```
 1. Dirígete a la carpeta public de Apache /var/www/html en el caso de Ubuntu. En la cual instalaras el juego.
@@ -27,7 +27,7 @@ _Estos son los pasos que deberas seguir para jugar sin problema a este maravillo
 `````
 6. Por último, y el paso mas inmportante, DISFRUTA!!!
 ```
-## Construido con 🛠️:
+## Construido con 🛠️
 * [GitHub](https://github.com/) - El gestor de versiones utilizado.
 * HTML y CSS junto a JavaScript para el entorno cliente.
 * Y PHP para el entorno servidor.
