@@ -13,19 +13,16 @@
         </div>
     </header>
     <main>
-        <div id="show_name">
-            <?php
-                $name = $_POST['username'];
-                echo "Jugador: ".$name;
-            ?>
+        <div id="title">
+            <h1>Ravenclaw Simon</h1>
         </div>
         <div class="container">
             <div id="scroll">
-                <div class="message" data-text="GAME OVER">GAME OVER</div>
+                <span id="message">GAME OVER</span>
             </div>
         </div>
         <div id="button_div">
-            <button id="button_play"><h3>INICIO</h3></button>
+            <button class="button_play"><h3>Inicio</h3></button>
         </div>
     </main>
     <footer>

@@ -17,19 +17,25 @@
             <h1>Ravenclaw Simon</h1>
         </div>
         <div class="container">
-            <div id="scroll">
-                <span id="message">NIVEL SUPERADO</span>
+            <div id="img">
+                
             </div>
+            <div id="scroll1">
+                <span id="congrats" >
+                    NIVEL SUPERADO
+                </span>
+             </div>
         </div>
-        <div id="button_div">
-            <button id="button_play"><h3>Inicio</h3></button>
-            <button id="button_play"><h3>Siguiente Nivel</h3></button>
+        <div id="button_play">
+            <button><h3>Inicio</h3></button>
+            <button><h3>Siguiente Nivel</h3></button>
+        </div>
+        <div id="name_introduction">
+
         </div>
     </main>
     <footer>
-        <div id="footer_content">
-            &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
-        </div>
+        ADIOS
     </footer>
 	<script type="text/javascript" src="main.js"></script>
 </body>
