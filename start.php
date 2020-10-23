@@ -48,3 +48,22 @@
         </div>
     </div>
 </div>
+<?php
+//0. NOM, 1. MATRIU, 2. PINTAR 3. SEGS, 4.CODI 
+$archivo = file('datos/prueba.txt');
+$nivel = explode(";", $archivo[0]);
+$cont = 0;
+//echo "<PRE>" . var_export($nivel, true) . "</PRE>";
+$filas = explode("x", $nivel[1]);
+echo " <table class='tg'><tbody>";
+for ($i = 1; $i <= $filas[0]; $i++) {
+    echo "<tr>";
+    for ($x = 1; $x <= $filas[1]; $x++) {
+        echo "<td class='tg'><span class='tg' id=" . $cont . "></span></td>";
+        $cont = $cont + 1;
+    }
+    echo "</tr>";
+}
+echo " </tbody> </table>";
+//echo "<PRE>" . print_r($filas, true) . "</PRE>";
+?>
