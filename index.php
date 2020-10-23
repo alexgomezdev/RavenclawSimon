@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
+    <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
 </head>
 <body>
@@ -37,14 +38,14 @@
                 </p>
             </div>
         </div>
-        <div id="button_div">
-            <button id="button_play"><h3>Jugar</h3></button>
-        </div>
-        <div id="name_introduction">
-            <form action="">
-                <label for="">Introduce tu nombre: </label><input type="text">
-            </form>
-        </div>
+        <form method="POST" action="start.php">
+            <div id="name_introduction">
+                <label for="username">Introduce tu nombre: </label><input type="text" id="username" name="username" placeholder="Ej. Iker" required oninvalid="this.setCustomValidity('Introduce un nombre')" onchange="this.setCustomValidity('')">
+            </div>
+            <div id="button_div">
+                <button id="button_play"><h3>JUGAR</h3></button>
+            </div>
+        </form>
     </main>
     <footer>
         <div id="footer_content">
