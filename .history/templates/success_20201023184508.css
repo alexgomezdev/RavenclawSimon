@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Dumbledore";
+  src: url("../templates/typography/dumbledor.1.ttf") format("truetype");
+}
+
+#scroll {
+  background: #5d5d5d;
+  direction: ltr;
+  text-align: center;
+  margin-top: 50%;
+}
+
+.message {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 120px;
+  font-family: "Dumbledore";
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}

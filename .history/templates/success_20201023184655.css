@@ -17,30 +17,6 @@ main {
   margin-bottom: 20px;
 }
 
-.ds-flex {
-  margin-top: 10%;
-}
-
-#button_div {
-  margin-top: 200px;
-  text-align: center;
-  width: 100%;
-}
-
-#button_play {
-  border-radius: 15px;
-  background-color: #5d5d5d;
-  font-family: "Dumbledore";
-  font-size: 20px;
-  width: 20%;
-  height: 100%;
-}
-
-#button_play:hover {
-  color: #5d5d5d;
-  background-color: #ffffff;
-}
-
 #scroll {
   background-color: #0e1a40;
   width: 50%;
