@@ -21,7 +21,7 @@
         </div>
         <div class="container">
             <div id="scroll">
-                <div class="message" data-text="GAME OVER">GAME OVER</div>
+                <div class="message" data-text="SUPERADO">NIVEL SUPERADO</div>
             </div>
         </div>
         <div id="button_div">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
-    <link rel="stylesheet" href="templates/gameOver.css">
+    <link rel="stylesheet" href="templates/success.css">
     <link rel="stylesheet" href="templates/general.css">
 </head>
 <body>

@@ -63,7 +63,7 @@ main {
   content: attr(data-text);
   position: absolute;
   left: 16%;
-  text-shadow: -1px 0 black;
+  text-shadow: -1px 0 red;
   top: 0;
   color: red;
   background: #0e1a40;
@@ -76,8 +76,8 @@ main {
 .message:before {
   content: attr(data-text);
   position: absolute;
-  left: 18%;
-  text-shadow: 1px 0 black;
+  left: 20%;
+  text-shadow: 1px 0 blue;
   top: 0;
   color: red;
   background: #0e1a40;

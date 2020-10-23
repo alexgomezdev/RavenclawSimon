@@ -13,12 +13,12 @@
         </div>
     </header>
     <main>
-        <div id="show_name">
+       <!--  <div id="show_name">
             <?php
                 $name = $_POST['username'];
                 echo "Jugador: ".$name;
             ?>
-        </div>
+        </div> -->
         <div class="container">
             <div id="scroll">
                 <div class="message" data-text="GAME OVER">GAME OVER</div>

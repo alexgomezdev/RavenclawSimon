@@ -13,11 +13,8 @@
         </div>
     </header>
     <main>
-        <div id="show_name">
-            <?php
-                $name = $_POST['username'];
-                echo "Jugador: ".$name;
-            ?>
+        <div id="title">
+            <h1>Ravenclaw Simon</h1>
         </div>
         <div class="container">
             <div id="scroll">
