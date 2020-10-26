@@ -1,0 +1,10 @@
+Lechuza;3x3;5;3;AA11
+Duendecillo;3x4;5;3,5;AZ21
+Centauro;3x4;7;3;BA3G
+Trol;3x4;8;2,5;5S7R
+Hipogrifo;4x4;7;3,5;R67T
+Gigante;4x4;9;3;78K5
+Dementor;4x4;8;2,5;OPH0
+Cancerbero;4x5;11;3,5;I796
+Dragón;4x5;13;3;9UGG
+Basilisco;5x5;14;3;6GPD
