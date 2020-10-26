@@ -68,7 +68,7 @@ session_start();
                 </table>
                 <div class=" ds-flex just-space-around">
                     <a class="btn-start">INICIAR PARTIDA</a>
-                    <a class="btn-start" method="POST" href="gameOver.php">RESOLVER</a>
+                    <a class="btn-start" href="success.php">RESOLVER</a>
                 </div>
             </div>
         </div>

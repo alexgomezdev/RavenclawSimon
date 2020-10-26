@@ -20,7 +20,6 @@ session_start();
         <div id="show_name">
             <?php
                 $_SESSION['user'] = $_POST['username'];
-            
                 if (isset($_SESSION['user']))
                     echo 'Jugador: '.$_SESSION['user'];
             ?>
@@ -68,7 +67,7 @@ session_start();
                 </table>
                 <div class=" ds-flex just-space-around">
                     <a class="btn-start">INICIAR PARTIDA</a>
-                    <a class="btn-start" method="POST" href="gameOver.php">RESOLVER</a>
+                    <button class="btn-start" onclick="location.href='success.php'"><h3>RESOLVER</h3></button>
                 </div>
             </div>
         </div>

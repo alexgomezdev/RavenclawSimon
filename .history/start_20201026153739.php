@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-?>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -19,10 +16,12 @@ session_start();
     <main>
         <div id="show_name">
             <?php
-                $_SESSION['user'] = $_POST['username'];
-            
-                if (isset($_SESSION['user']))
-                    echo 'Jugador: '.$_SESSION['user'];
+                if ($_POST["button_play"]) {
+                    foreach ($_POST as $key => $value) {
+                        $_SESSION['users'][$key] = $value
+                    }
+                }
+                echo $_SESSION['users']['username']
             ?>
         </div>
         <div class="container maxwd just-cont-center ds-flex">
@@ -68,7 +67,7 @@ session_start();
                 </table>
                 <div class=" ds-flex just-space-around">
                     <a class="btn-start">INICIAR PARTIDA</a>
-                    <a class="btn-start" method="POST" href="gameOver.php">RESOLVER</a>
+                    <a class="btn-start">RESOLVER</a>
                 </div>
             </div>
         </div>

@@ -27,18 +27,12 @@ table {
 }
 
 .btn-start {
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 20px;
+  border-radius: 15px;
   background-color: #5d5d5d;
-  border-radius: 6px;
-  margin-top: 40px;
-  margin-bottom: 100px;
-}
-
-a:-webkit-any-link {
-  color: black;
+  font-family: "Dumbledore";
+  font-size: 20px;
+  width: 20%;
+  height: 100%;
 }
 
 .btn-start:hover {

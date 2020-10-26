@@ -37,10 +37,6 @@ table {
   margin-bottom: 100px;
 }
 
-a:-webkit-any-link {
-  color: black;
-}
-
 .btn-start:hover {
   color: #5d5d5d;
   background-color: #ffffff;
