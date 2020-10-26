@@ -34,3 +34,7 @@ table {
   background-color: #ffffff;
   border-color: #5d5d5d;
 }
+
+.choosed {
+  background-color: aqua !important;
+}
