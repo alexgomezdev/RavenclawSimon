@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -11,6 +14,18 @@
 </head>
 
 <body>
+<header>
+        <div id="home_link_div">
+            <a href="index.php" id="home_link">HOME</a>
+        </div>
+    </header>
+    <div id="show_name">
+            <?php
+                $_SESSION['user'] = $_POST['username'];
+                if (isset($_SESSION['user']))
+                    echo 'Jugador: '.$_SESSION['user'];
+            ?>
+        </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
         <div>
@@ -53,11 +68,17 @@
             ?>
 
             <div class=" ds-flex just-space-around">
-                <a class="btn-start" onclick="showNices()">INICIA PARTIDA</a>
-                <a class="btn-start" onclick="winorlose() ">RESOLDRE</a>
+                <a class="btn-start" onclick="showNices()">INICIAR PARTIDA</a>
+                <a class="btn-start" onclick="winorlose() ">RESOLVER</a>
             </div>
         </div>
     </div>
+    <footer>
+        <div id="footer_content">
+            &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
+        </div>
+    </footer>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
