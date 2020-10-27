@@ -41,7 +41,7 @@
                         echo "<td class='tg plus'  id='. $cont . ' onclick='choose(this.id)' '></td>";
                         $cont = $cont + 1;
                     } else {
-                        echo "<td class='tg' id='. $cont . '></td>";
+                        echo "<td class='tg' id='. $cont . ' onclick='choose(this.id)'></td>";
                         $cont = $cont + 1;
                     }
                 }
@@ -53,7 +53,7 @@
 
             <div class=" ds-flex just-space-around">
                 <a class="btn-start" onclick="showNices()">INICIA PARTIDA</a>
-                <a class="btn-start">RESOLDRE</a>
+                <a class="btn-start" onclick="winorlose() ">RESOLDRE</a>
             </div>
         </div>
     </div>
