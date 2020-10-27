@@ -29,7 +29,7 @@ function winorlose() {
     if ((contNice.length == tdstimeut.length) && ((playResut.length == tdstimeut.length)) ){
         alert("Has ganaao pisha")
     }else{
-        alert("has perdido maricon")
+        alert("has perdido noob")
     }
     // alert(playResut.length);
 }
