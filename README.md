@@ -18,7 +18,7 @@ _Estos son los pasos que deberas seguir para jugar sin problema a este maravillo
 1. Dirigete a la carpeta public de apache /var/Www/html en el caso de ubuntu. En la cual instalaras el juego.
 ```
 ```
-2. Abre un terminal en esa carpeta y copia el siguiente codigo: git clone https://github.com/AWS2/welcome.git
+2. Abre un terminal en esa carpeta y copia el siguiente codigo: git clone https://github.com/alexgomezdev/RavenclawSimon.git
 ```
 ```
 3. Introduce el usuario y la contraseña de GitHub (si es necesario), nosotros en ningun momento veremos dichos datos.
