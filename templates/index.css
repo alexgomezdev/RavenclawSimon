@@ -1,3 +1,21 @@
+#ranking_link_div {
+  text-align: center;
+  width: 10%;
+  height: 90%;
+}
+
+#ranking_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  height: 60%;
+  margin-top: 9%;
+  margin-bottom: 10%;
+}
+
 .container {
   display: flex;
   margin-top: 5%;

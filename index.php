@@ -14,6 +14,9 @@
         <div id="home_link_div">
             <a href="index.php" id="home_link">HOME</a>
         </div>
+        <div id="ranking_link_div">
+            <a href="ranking.php" id="ranking_link">RANKING</a>
+        </div>
     </header>
     <main>
         <div id="title">
