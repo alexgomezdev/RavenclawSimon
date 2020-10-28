@@ -53,7 +53,7 @@
 
             <div class=" ds-flex just-space-around">
                 <a class="btn-start" onclick="showNices()">INICIA PARTIDA</a>
-                <a class="btn-start">RESOLDRE</a>
+                <a class="btn-start" onclick="winorlose() ">RESOLDRE</a>
             </div>
         </div>
     </div>
