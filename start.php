@@ -41,7 +41,7 @@
                         echo "<td class='tg plus'  id='. $cont . ' onclick='choose(this.id)' '></td>";
                         $cont = $cont + 1;
                     } else {
-                        echo "<td class='tg' id='. $cont . '></td>";
+                        echo "<td class='tg' id='. $cont . ' onclick='choose(this.id)'></td>";
                         $cont = $cont + 1;
                     }
                 }
