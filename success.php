@@ -19,8 +19,9 @@ session_start();
     <main>
         <div id="show_name">
             <?php
-               if (isset($_SESSION['user']))
-                echo 'Jugador: '.$_SESSION['user'];
+                if (isset($_SESSION['user'])) {
+                    echo 'Jugador: '.$_SESSION['user'];
+                }
             ?>
         </div>
         <div class="container">

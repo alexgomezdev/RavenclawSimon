@@ -22,8 +22,9 @@ session_start();
     <div id="show_name">
             <?php
                 $_SESSION['user'] = $_POST['username'];
-                if (isset($_SESSION['user']))
+                if (isset($_SESSION['user'])) {
                     echo 'Jugador: '.$_SESSION['user'];
+                }
             ?>
         </div>
     <script src="js/playing.js"></script>

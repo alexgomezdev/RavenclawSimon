@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<?php
+    session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
@@ -40,7 +43,13 @@
         </div>
         <form  method="POST" action="start.php">
             <div id="name_introduction">
-                <label for="username">Introduce tu nombre: </label><input type="text" id="username" name="username" placeholder="Ej. Iker" required oninvalid="this.setCustomValidity('Introduce un nombre')" onchange="this.setCustomValidity('')">
+                <?php
+                    if (isset($_SESSION['user'])) {
+                        echo "<label for='username'>Introduce tu nombre: </label><input type='text' id='username' name='username' placeholder='Ej. Iker' value='".$_SESSION['user']."' required oninvalid='this.setCustomValidity(\"Introduce un nombre\")' onchange='this.setCustomValidity(\"\")'>";
+                    } else {
+                        echo '<label for="username">Introduce tu nombre: </label><input type="text" id="username" name="username" placeholder="Ej. Iker" required oninvalid="this.setCustomValidity(\'Introduce un nombre\')" onchange="this.setCustomValidity(\'\')">';
+                    }
+                ?>
             </div>
             <div id="button_div">
                 <button id="button_play"><h3>JUGAR</h3></button>
