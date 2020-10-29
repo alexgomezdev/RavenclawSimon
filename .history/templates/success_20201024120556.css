@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Dumbledore";
+  src: url("../templates/typography/dumbledor.1.ttf") format("truetype");
+}
+
+main {
+  text-align: center;
+}
+
+#show_name {
+  color: #ffffff;
+  font-family: "Harry_Potter";
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+.ds-flex {
+  margin-top: 10%;
+}
+
+#button_div {
+  margin-top: 200px;
+  text-align: center;
+  width: 100%;
+}
+
+#button_play {
+  border-radius: 15px;
+  background-color: #5d5d5d;
+  font-family: "Dumbledore";
+  font-size: 20px;
+  width: 20%;
+  height: 100%;
+}
+
+#button_play:hover {
+  color: #5d5d5d;
+  background-color: #ffffff;
+}
+
+#scroll {
+  width: 50%;
+  margin: 0 25%;
+  text-align: center;
+  position: relative;
+}
+
+@keyframes myfirst {
+  0% {
+    background-color: #6cc070;
+    color: #6cc070;
+    left: 100px;
+    top: 100px;
+  }
+  25% {
+    background-color: #6cc070;
+    color: green;
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    background-color: #6cc070;
+    color: white;
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    background-color: #6cc070;
+    color: green;
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    background-color: #6cc070;
+    color: #6cc070;
+    left: 100px;
+    top: 0px;
+  }
+}
+
+.message {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 100px;
+  font-family: "Dumbledore";
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  animation: myfirst 5s linear 1s infinite alternate;
+}

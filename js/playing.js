@@ -1,14 +1,11 @@
-var tdstimeut = document.getElementsByClassName('plus');
+var tdscorrects = document.getElementsByClassName('plus');
 function hideNices (){
-    
-    var tdstimeut = document.getElementsByClassName('plus');
-        for (const key of tdstimeut) {
+        for (const key of tdscorrects) {
         key.classList.remove('nice'); 
     }
 }
 function showNices(){
-        var tdstimeut = document.getElementsByClassName('plus');
-        for (const x of tdstimeut) {
+        for (const x of tdscorrects) {
                 x.classList.add('nice'); 
             }
         setTimeout(hideNices,4000)
@@ -26,10 +23,10 @@ function choose(id) {
 function winorlose() {
     var playResut = document.getElementsByClassName('plus nice');
     var contNice = document.getElementsByClassName('nice')
-    if ((contNice.length == tdstimeut.length) && ((playResut.length == tdstimeut.length)) ){
-        alert("Has ganaao pisha")
+    if ((contNice.length == tdscorrects.length) && ((playResut.length == tdscorrects.length)) ){
+        window.open("success.php", "_self");
     }else{
-        alert("has perdido maricon")
+        window.open("gameOver.php" , "_self");
     }
     // alert(playResut.length);
 }
