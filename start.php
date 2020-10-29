@@ -1,24 +1,63 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 
 <head>
     <link rel="stylesheet" href="templates/lib.css">
     <link rel="stylesheet" href="templates/start.css">
+    <link rel="stylesheet" href="templates/general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+    <header>
+        <div id="home_link_div">
+            <a href="index.php" id="home_link">HOME</a>
+        </div>
+    </header>
+    <div id="show_name">
+        <?php
+        if (isset($_POST['username'])) {
+            $username = $_POST['username'];
+            if (isset($_SESSION['user']) && $_SESSION['user'] != $_POST['username']) {
+                session_unset();
+            }
+            if (isset($_SESSION['user'])) {
+                echo 'Jugador: ' . $_SESSION['user'];
+            } else {
+                $_SESSION['user'] = $username;
+
+                echo 'Jugador: ' . $_SESSION['user'];
+            }
+        } else {
+            if (isset($_SESSION['user'])) {
+                echo 'Jugador: ' . $_SESSION['user'];
+            }
+        }
+        if (isset($_SESSION['lvl'])) {
+            if ($_GET["do"] == "next") {
+                $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
+            }
+        } else {
+            $_SESSION['lvl'] = 0;
+        }
+        $archivo = file('templates/config.txt');
+        $nivel = explode(";", $archivo[$_SESSION['lvl']]);
+        $filas = explode("x", $nivel[1]);
+        $randArray = [];
+        $randNum = [];
+        echo "</br>Nivel: " . $nivel[0];
+        ?>
+    </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
         <div>
             <?php
-            $archivo = file('datos/prueba.txt');
-            $nivel = explode(";", $archivo[0]);
-            $filas = explode("x", $nivel[1]);
-            $randArray = [];
-            $randNum = [];
+
             for ($m = 1; $m <= $nivel[2]; $m++) {
                 $randNum = rand(0, ($filas[0] * $filas[1]) - 1);
                 if (in_array($randNum, $randArray)) {
@@ -27,7 +66,7 @@
                     array_push($randArray, $randNum);
                 }
             }
-            //echo "<PRE>" . print_r($randArray, true) . "</PRE>";
+            //echo "<PRE>" . print_r($_SESSION['lvl'], true) . "</PRE>";
             //0. NOM, 1. MATRIU, 2. PINTAR 3. SEGS, 4.CODI 
 
             $cont = 0;
@@ -52,11 +91,17 @@
             ?>
 
             <div class=" ds-flex just-space-around">
-                <a class="btn-start" onclick="showNices()">INICIA PARTIDA</a>
-                <a class="btn-start" onclick="winorlose() ">RESOLDRE</a>
+                <a class="btn-start" onclick="showNices()">INICIAR PARTIDA</a>
+                <a class="btn-start" onclick="winorlose() ">RESOLVER</a>
             </div>
         </div>
     </div>
+    <footer>
+        <div id="footer_content">
+            &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
+        </div>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
