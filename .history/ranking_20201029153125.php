@@ -11,7 +11,7 @@
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h">HOME</a>
+            <a href="index.php" id="home_link">HOME</a>
         </div>
     </header>
     <main>
