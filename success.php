@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw Simon</title>
-    <link rel="stylesheet" href="templates/gameOver.css">
+    <link rel="stylesheet" href="templates/success.css">
     <link rel="stylesheet" href="templates/general.css">
 </head>
 <body>
@@ -25,7 +25,7 @@ session_start();
         </div>
         <div class="container">
             <div id="scroll">
-                <span>G</span><span>A</span><span>M</span><span>E</span><span>&nbsp;</span><span>O</span><span>V</span><span>E</span><span>R</span>
+                <h1><span>¡</span><span>N</span><span>I</span><span>V</span><span>E</span><span>L</span><span> </span><span>S</span><span>U</span><span>P</span><span>E</span><span>R</span><span>A</span><span>D</span><span>O</span><span>!</span></h1>            
             </div>
         </div>
         <div id="button_div">
