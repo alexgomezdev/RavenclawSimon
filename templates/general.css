@@ -29,9 +29,12 @@ header {
 }
 
 #home_link_div {
+  margin-left: 3%;
+  padding-top: 9px;
   text-align: center;
-  width: 10%;
-  height: 90%;
+  width: 3%;
+  height: 100%;
+  margin-right: none;
 }
 
 #home_link {
@@ -41,8 +44,9 @@ header {
   color: #ffffff;
   font-size: 20px;
   text-decoration: none;
+  width: min-content;
   height: 60%;
-  margin-top: 9%;
+  margin-top: 10%;
   margin-bottom: 10%;
 }
 
