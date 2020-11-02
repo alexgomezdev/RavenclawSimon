@@ -50,8 +50,12 @@ session_start();
         $filas = explode("x", $nivel[1]);
         $randArray = [];
         $randNum = [];
+        $segons = $nivel[3] * 1000;
         echo "</br>Nivel: " . $nivel[0];
         ?>
+        <script type="text/javascript">
+            var segons = <?php echo $segons; ?>
+        </script>
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
