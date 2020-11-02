@@ -8,7 +8,7 @@ function showNices(){
         for (const x of tdscorrects) {
                 x.classList.add('nice'); 
             }
-        setTimeout(hideNices,4000)
+        setTimeout(hideNices,segons)
     };
     
 function choose(id) {
