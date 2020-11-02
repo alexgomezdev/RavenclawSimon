@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
+//prueba
 session_start();
 ?>
 
