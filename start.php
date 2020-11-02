@@ -39,7 +39,7 @@ session_start();
             }
         }
         if (isset($_SESSION['lvl'])) {
-            if ($_GET["do"] == "next") {
+            if ( isset($_GET["do"]) && $_GET["do"] == "next") {
                 $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
             }
         } else {
