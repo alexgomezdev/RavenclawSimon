@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <?php
-    session_start();
+session_start();
 ?>
+
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
 </head>
+
 <body>
     <header>
         <div id="home_link_div">
@@ -44,18 +46,20 @@
                 </p>
             </div>
         </div>
-        <form  method="POST" action="start.php">
+        <form method="POST" action="start.php">
             <div id="name_introduction">
                 <?php
-                    if (isset($_SESSION['user'])) {
-                        echo "<label for='username'>Introduce tu nombre: </label><input type='text' id='username' name='username' placeholder='Ej. Iker' value='".$_SESSION['user']."' required oninvalid='this.setCustomValidity(\"Introduce un nombre\")' onchange='this.setCustomValidity(\"\")'>";
-                    } else {
-                        echo '<label for="username">Introduce tu nombre: </label><input type="text" id="username" name="username" placeholder="Ej. Iker" required oninvalid="this.setCustomValidity(\'Introduce un nombre\')" onchange="this.setCustomValidity(\'\')">';
-                    }
+                if (isset($_SESSION['user'])) {
+                    echo "<label for='username'>Introduce tu nombre: </label><input type='text' id='username' name='username' placeholder='Ej. Iker' value='" . $_SESSION['user'] . "' required oninvalid='this.setCustomValidity(\"Introduce un nombre\")' onchange='this.setCustomValidity(\"\")'>";
+                } else {
+                    echo '<label for="username">Introduce tu nombre: </label><input type="text" id="username" name="username" placeholder="Ej. Iker" required oninvalid="this.setCustomValidity(\'Introduce un nombre\')" onchange="this.setCustomValidity(\'\')">';
+                }
                 ?>
             </div>
             <div id="button_div">
-                <button id="button_play" accesskey="j"><h3>JUGAR</h3></button>
+                <button id="button_play" accesskey="j">
+                    <h3>JUGAR</h3>
+                </button>
             </div>
         </form>
     </main>
@@ -65,4 +69,5 @@
         </div>
     </footer>
 </body>
+
 </html>
