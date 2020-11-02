@@ -1,14 +1,20 @@
 var tdscorrects = document.getElementsByClassName('plus');
 function hideNices (){
-        for (const key of tdscorrects) {
+    for (const key of tdscorrects) {
         key.classList.remove('nice'); 
+    }
+    document.getElementById("solve_button").removeAttribute('disabled');
+    var clickable = document.getElementsByClassName('tg');
+    var clickable = document.getElementsByClassName('tg');
+    for (const x of clickable) {
+        x.setAttribute('onclick', 'choose(this.id)');
     }
 }
 function showNices(){
-        for (const x of tdscorrects) {
-                x.classList.add('nice'); 
-            }
-        setTimeout(hideNices,4000)
+    for (const x of tdscorrects) {
+            x.classList.add('nice'); 
+        }
+    setTimeout(hideNices,4000)
     };
     
 function choose(id) {
