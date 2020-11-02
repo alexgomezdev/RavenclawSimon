@@ -2,12 +2,10 @@
   width: 100%;
 }
 
-.ds-flex {
-  display: flex;
-}
 .just-cont-center {
   justify-content: center;
 }
+
 .just-space-around {
   justify-content: space-around;
 }

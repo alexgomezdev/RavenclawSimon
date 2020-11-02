@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="templates/general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ravenclaw Simon</title>
 </head>
 
 <body>
@@ -59,7 +59,7 @@ session_start();
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
-        <div>
+        <div class="table">
             <?php
 
             for ($m = 1; $m <= $nivel[2]; $m++) {
@@ -81,10 +81,10 @@ session_start();
                 echo "<tr>";
                 for ($x = 1; $x <= $filas[1]; $x++) {
                     if (in_array($cont, $randArray)) {
-                        echo "<td class='tg plus'  id='. $cont . ' onclick='choose(this.id)' '></td>";
+                        echo "<td class='tg plus'  id='. $cont . ' ' '></td>";
                         $cont = $cont + 1;
                     } else {
-                        echo "<td class='tg' id='. $cont . ' onclick='choose(this.id)'></td>";
+                        echo "<td class='tg' id='. $cont . ' '></td>";
                         $cont = $cont + 1;
                     }
                 }
@@ -93,10 +93,15 @@ session_start();
             echo " </tbody> </table>";
             //echo "<PRE>" . print_r($filas, true) . "</PRE>";
             ?>
-
-            <div class=" ds-flex just-space-around">
-                <a class="btn-start" onclick="showNices()" accesskey="i">INICIAR PARTIDA</a>
-                <a class="btn-start" onclick="winorlose()" accesskey="s">RESOLVER</a>
+        </div>
+        <div class=" ds-flex just-space-around">
+            <div id="button_div">
+                <button class="button_play" onclick="showNices()" accesskey="i">
+                    <h3>INICIAR PARTIDA</h3>
+                </button>
+                <button class="button_play" id="solve_button" onclick="winorlose()" accesskey="s" disabled>
+                    <h3>RESOLVER</h3>
+                </button>
             </div>
         </div>
     </div>

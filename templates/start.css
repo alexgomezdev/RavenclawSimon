@@ -19,29 +19,33 @@
 }
 
 table {
-  width: 100px;
+  width: 100%;
+  margin:  0 auto;
 }
+
 
 .nice {
   background-color: #946b2d;
 }
 
-.btn-start {
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 20px;
-  background-color: #919191;
-  border-radius: 6px;
-  margin-top: 40px;
+#button_div {
+  display: inline-block;
+  margin-top: 50px;
   margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
 }
 
-a:-webkit-any-link {
-  color: black;
+.button_play {
+  border-radius: 15px;
+  background-color: #919191;
+  font-family: "Dumbledore";
+  font-size: 20px;
+  width: 20%;
+  height: 100%;
 }
 
-.btn-start:hover {
+.button_play:hover {
   color: #5d5d5d;
   background-color: #ffffff;
 }
