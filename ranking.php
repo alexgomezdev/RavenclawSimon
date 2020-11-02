@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
+    <link rel="stylesheet" href="templates/ranking.css">
 </head>
 <body>
     <header>
@@ -15,7 +16,36 @@
         </div>
     </header>
     <main>
-        
+        <div class="container">
+            <table>
+                <caption> La clasificación de los puntos aportados a Ravenclaw va asi:</caption>
+                <thead>
+                    <tr id="row_head">
+                        <th>NOMBRE</th>
+                        <th>PUNTUACIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $users =[];
+                        $rank = file('prueba.txt', FILE_IGNORE_NEW_LINES);
+
+                        foreach ($rank as $player) {
+                            list($user, $punctuation) = explode(";", $player);
+                            intval($punctuation);
+                            array_push($users, ["user" => $user, "punctuation" => $punctuation]);
+                        }
+                        usort($users, function ($item1, $item2) {
+                            return $item2['punctuation'] > $item1['punctuation'];
+                        });
+                        foreach ($users as $data) {
+                            echo "<tr><td>".$data["user"]."</td><td>".$data["punctuation"]." <img src='templates/assets/sapphire.png' alt='Sapphire'></td></tr>";
+                        }
+                        
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </main>
     <footer>
         <div id="footer_content">
