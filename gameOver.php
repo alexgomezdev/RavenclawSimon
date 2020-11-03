@@ -37,8 +37,11 @@ session_start();
             </div>
         </div>
         <div id="button_div">
-            <button id="button_play" onclick="location.href='start.php'" accesskey="v">
+            <button class="button_play" onclick="location.href='start.php'" accesskey="v">
                 <h3>VOLVER A PROVAR</h3>
+            </button>
+            <button class="button_play" onclick="location.href='start.php'" accesskey="g">
+                <h4>GUARDAR PUNTUACIÓN</h4>
             </button>
         </div>
     </main>
