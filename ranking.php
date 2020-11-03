@@ -27,9 +27,16 @@
                 </thead>
                 <tbody>
                     <?php
+                        if (isset($_GET["do"]) && $_GET["do"] == "save"){
+                            if (isset($_SESSION['user']) && isset($_SESSION['rankPoints']) ){
+                                $rankToWrite = fopen('ranking.txt',"a");
+                                $toWrite=htmlspecialchars($_SESSION['user']).";".$_SESSION['rankPoints']."\r\n";
+                                fwrite($rankToWrite,$toWrite);
+                                fclose($rankToWrite);
+                            }
+                        }
                         $users =[];
-                        $rank = file('prueba.txt', FILE_IGNORE_NEW_LINES);
-
+                        $rank = file('ranking.txt', FILE_IGNORE_NEW_LINES);
                         foreach ($rank as $player) {
                             list($user, $punctuation) = explode(";", $player);
                             intval($punctuation);
@@ -41,7 +48,6 @@
                         foreach ($users as $data) {
                             echo "<tr><td>".$data["user"]."</td><td>".$data["punctuation"]." <img src='templates/assets/sapphire.png' alt='Sapphire'></td></tr>";
                         }
-                        
                     ?>
                 </tbody>
             </table>

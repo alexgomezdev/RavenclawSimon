@@ -40,10 +40,16 @@ session_start();
         }
         if (isset($_SESSION['lvl'])) {
             if ( isset($_GET["do"]) && $_GET["do"] == "next") {
+                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] + 1000;
                 $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
+            } else if (isset($_GET["do"]) && $_GET["do"] == "tryagain") {
+                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] - 50;
             }
         } else {
             $_SESSION['lvl'] = 0;
+        }
+        if (!isset($_SESSION['rankPoints'])) {
+            $_SESSION['rankPoints'] = 1000;
         }
         $archivo = file('templates/config.txt');
         $nivel = explode(";", $archivo[$_SESSION['lvl']]);
@@ -55,6 +61,7 @@ session_start();
         ?>
         <script type="text/javascript">
             var segons = <?php echo $segons; ?>
+            
         </script>
     </div>
     <script src="js/playing.js"></script>

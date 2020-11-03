@@ -9,7 +9,8 @@ function hideNices (){
     for (const x of clickable) {
         x.setAttribute('onclick', 'choose(this.id)');
     }
-}
+    startTime =new Date();
+};
 function showNices(){
     for (const x of tdscorrects) {
             x.classList.add('nice'); 
@@ -27,12 +28,16 @@ function choose(id) {
 };
 
 function winorlose() {
+    endTime = new Date();
+    var intervalTime = endTime - startTime ;
+    intervalTime = intervalTime/100;
+    timeToReturn = Math.round(intervalTime);
     var playResut = document.getElementsByClassName('plus nice');
     var contNice = document.getElementsByClassName('nice')
     if ((contNice.length == tdscorrects.length) && ((playResut.length == tdscorrects.length)) ){
-        window.open("success.php", "_self");
+        window.open("success.php?tiempo="+timeToReturn, "_self");
     }else{
-        window.open("gameOver.php" , "_self");
+        window.open("gameOver.php", "_self");
     }
     // alert(playResut.length);
-}
+};

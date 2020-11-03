@@ -37,10 +37,10 @@ session_start();
             </div>
         </div>
         <div id="button_div">
-            <button class="button_play" onclick="location.href='start.php'" accesskey="v">
+            <button class="button_play" onclick="location.href='start.php?do=tryagain'" accesskey="v">
                 <h3>VOLVER A PROVAR</h3>
             </button>
-            <button class="button_play" onclick="location.href='start.php'" accesskey="g">
+            <button class="button_play" onclick="location.href='ranking.php?do=save'" accesskey="g">
                 <h4>GUARDAR PUNTUACIÓN</h4>
             </button>
         </div>

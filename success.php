@@ -26,6 +26,9 @@ session_start();
             if (isset($_SESSION['user'])) {
                 echo 'Jugador: ' . $_SESSION['user'];
             }
+            if (isset($_SESSION['rankPoints']) && isset($_GET['tiempo']) ) {
+                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] - $_GET['tiempo'];
+            }
             ?>
         </div>
         <div class="container">
@@ -38,13 +41,13 @@ session_start();
         </div>
 
         <div id="button_div">
-            <button class="button_play" onclick="location.href='start.php'" accesskey="v">
+            <button class="button_play" onclick="location.href='start.php?do=tryagain' accesskey="v">
                 <h3>VOLVER A PROVAR</h3>
             </button>
             <button class="button_play" onclick="location.href='start.php?do=next'" accesskey="n">
                 <h3>SIGUIENTE NIVEL</h3>
             </button>
-            <button class="button_play" onclick="location.href='start.php'" accesskey="g">
+            <button class="button_play" onclick="location.href='ranking.php?do=save'" accesskey="g">
                 <h4>GUARDAR PUNTUACIÓN</h4>
             </button>
         </div>
