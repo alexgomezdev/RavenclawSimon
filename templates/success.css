@@ -26,7 +26,7 @@ main {
   width: 100%;
 }
 
-#button_play {
+.button_play {
   border-radius: 15px;
   background-color: #919191;
   font-family: "Dumbledore";
@@ -35,7 +35,7 @@ main {
   height: 100%;
 }
 
-#button_play:hover {
+.button_play:hover {
   color: #5d5d5d;
   background-color: #ffffff;
 }
@@ -49,9 +49,9 @@ main {
 }
 
 #code {
+  margin-top: 100px;
   font-family: "Dumbledore";
   font-size: 25px;
-  user-select: none;
   color: white;
 }
 
