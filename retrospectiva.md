@@ -1,4 +1,4 @@
-##SPRINT 1
+## SPRINT 1
 ### A FAVOR:
 
 - Nos hemos coordinado bastante bien como equipo.
@@ -12,7 +12,7 @@
 - Hemos priorizado más tarde la funcionalidad del juego ante la estructura y el diseño de este. Esto quizás nos ha hecho
   ir más justos de tiempo en el sprint.
 
-##SPRINT 2
+## SPRINT 2
 ### A FAVOR:
 
 - Nos hemos coordinado bastante bien como equipo.
@@ -21,4 +21,5 @@
 
 ### EN CONTRA:
 
-- Hemos tenido problemas con el GitHub, lo cual nos ha hecho perder tiempo para vovler a engancharnos al trabajo. 
+- Hemos tenido problemas con el control de versiones, lo cual nos ha hecho perder tiempo para volver a engancharnos al trabajo. 
+- Se han añadido aclaraciones de las especificaciones a última hora. 
