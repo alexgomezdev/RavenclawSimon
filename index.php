@@ -57,6 +57,15 @@ session_start();
                 }
                 ?>
             </div>
+            <div id="level_introduction">
+                <label for="username">Código de nivel: </label><input type="text" id="level" name="level" />
+            </div>
+            <div id="games_type">
+                <input type="checkbox" class="checkbox" id="lier" name="lier">
+                <label for="lier" title="Modo mentiroso">MODO HORROCRUX</label>
+                <input type="checkbox" class="checkbox" id="survive" name="survive">
+                <label for="survive" title="Modo supervivencia">MODO IMPOSTORUS</label>
+            </div>
             <div id="button_div">
                 <button id="button_play" accesskey="j">
                     <h3>JUGAR</h3>
