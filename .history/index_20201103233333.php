@@ -15,10 +15,10 @@ session_start();
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h">HOME</a>
         </div>
         <div id="ranking_link_div">
-            <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
+            <a href="ranking.php" id="ranking_link" accesskey="r">RANKING</a>
         </div>
     </header>
     <main>
@@ -59,7 +59,7 @@ session_start();
             </div>
             <div id="button_div">
                 <button id="button_play" accesskey="j">
-                    <h3><underline class='accesskey'>J</underline>UGAR</h3>
+                    <h3>JUGAR</h3>
                 </button>
             </div>
         </form>

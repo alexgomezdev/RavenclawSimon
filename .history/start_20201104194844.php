@@ -16,7 +16,7 @@ session_start();
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h"><span class="accesskey">H</span>OME</a>
         </div>
     </header>
     <div id="show_name">
@@ -104,10 +104,10 @@ session_start();
         <div class=" ds-flex just-space-around">
             <div id="button_div">
                 <button class="button_play" onclick="showNices()" accesskey="i">
-                    <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
+                    <h3><span class="accesskey">I</span>NICIAR PARTIDA</h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" accesskey="s" disabled>
-                    <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
+                    <h3>RE<span class="accesskey">S</span>OLVER</h3>
                 </button>
             </div>
         </div>

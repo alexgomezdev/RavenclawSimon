@@ -59,7 +59,7 @@ session_start();
             </div>
             <div id="button_div">
                 <button id="button_play" accesskey="j">
-                    <h3><underline class='accesskey'>J</underline>UGAR</h3>
+                    <h3><silvia class='accesskey'>J</silvia>UGAR</h3>
                 </button>
             </div>
         </form>
