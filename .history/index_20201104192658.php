@@ -15,10 +15,10 @@ session_start();
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h">HOME</a>
         </div>
         <div id="ranking_link_div">
-            <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
+            <a href="ranking.php" id="ranking_link" accesskey="r"><span class='accesskey'>R</span>ANKING</a>
         </div>
     </header>
     <main>
@@ -57,18 +57,9 @@ session_start();
                 }
                 ?>
             </div>
-            <div id="level_introduction">
-                <label for="username">Código de nivel: </label><input type="text" id="level" name="level" />
-            </div>
-            <div id="games_type">
-                <input type="checkbox" class="checkbox" id="lier" name="lier">
-                <label for="lier" title="Modo mentiroso">MODO HORROCRUX</label>
-                <input type="checkbox" class="checkbox" id="survive" name="survive">
-                <label for="survive" title="Modo supervivencia">MODO IMPOSTORUS</label>
-            </div>
             <div id="button_div">
                 <button id="button_play" accesskey="j">
-                    <h3><underline class='accesskey'>J</underline>UGAR</h3>
+                    <h3>JUGAR</h3>
                 </button>
             </div>
         </form>

@@ -15,7 +15,7 @@ session_start();
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h"><span class="accesskey">H</span>OME</a>
         </div>
     </header>
     <main>
@@ -38,10 +38,10 @@ session_start();
         </div>
         <div id="button_div">
             <button class="button_play" onclick="location.href='start.php?do=tryagain'" accesskey="v">
-                <h3><underline class="accesskey">V</underline>OLVER A PROVAR</h3>
+                <h3><span class="accesskey">V</span>OLVER A PROVAR</h3>
             </button>
             <button class="button_play" onclick="location.href='ranking.php?do=save'" accesskey="g">
-                <h4><underline class="accesskey">G</underline>UARDAR PUNTUACIÓN</h4>
+                <h4>GUARDAR PUNTUACIÓN</h4>
             </button>
         </div>
     </main>

@@ -10,13 +10,13 @@ session_start();
     <link rel="stylesheet" href="templates/general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravenclaw Simon</title>
+    <title>Document</title>
 </head>
 
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h">HOME</a>
         </div>
     </header>
     <div id="show_name">
@@ -39,34 +39,23 @@ session_start();
             }
         }
         if (isset($_SESSION['lvl'])) {
-            if ( isset($_GET["do"]) && $_GET["do"] == "next") {
-                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] + 1000;
+            if ($_GET["do"] == "next") {
                 $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
-            } else if (isset($_GET["do"]) && $_GET["do"] == "tryagain") {
-                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] - 50;
             }
         } else {
             $_SESSION['lvl'] = 0;
-        }
-        if (!isset($_SESSION['rankPoints'])) {
-            $_SESSION['rankPoints'] = 1000;
         }
         $archivo = file('templates/config.txt');
         $nivel = explode(";", $archivo[$_SESSION['lvl']]);
         $filas = explode("x", $nivel[1]);
         $randArray = [];
         $randNum = [];
-        $segons = $nivel[3] * 1000;
         echo "</br>Nivel: " . $nivel[0];
         ?>
-        <script type="text/javascript">
-            var segons = <?php echo $segons; ?>
-            
-        </script>
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
-        <div class="table">
+        <div>
             <?php
 
             for ($m = 1; $m <= $nivel[2]; $m++) {
@@ -88,10 +77,10 @@ session_start();
                 echo "<tr>";
                 for ($x = 1; $x <= $filas[1]; $x++) {
                     if (in_array($cont, $randArray)) {
-                        echo "<td class='tg plus'  id='. $cont . ' ' '></td>";
+                        echo "<td class='tg plus'  id='. $cont . ' onclick='choose(this.id)' '></td>";
                         $cont = $cont + 1;
                     } else {
-                        echo "<td class='tg' id='. $cont . ' '></td>";
+                        echo "<td class='tg' id='. $cont . ' onclick='choose(this.id)'></td>";
                         $cont = $cont + 1;
                     }
                 }
@@ -100,15 +89,10 @@ session_start();
             echo " </tbody> </table>";
             //echo "<PRE>" . print_r($filas, true) . "</PRE>";
             ?>
-        </div>
-        <div class=" ds-flex just-space-around">
-            <div id="button_div">
-                <button class="button_play" onclick="showNices()" accesskey="i">
-                    <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
-                </button>
-                <button class="button_play" id="solve_button" onclick="winorlose()" accesskey="s" disabled>
-                    <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
-                </button>
+
+            <div class=" ds-flex just-space-around">
+                <a class="btn-start" onclick="showNices()" accesskey="i">INICIAR PARTIDA</a>
+                <a class="btn-start" onclick="winorlose()" accesskey="s">RESOLVER</a>
             </div>
         </div>
     </div>

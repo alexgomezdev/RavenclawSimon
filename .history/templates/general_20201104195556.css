@@ -59,7 +59,7 @@ header {
   margin-top: 120px;
 }
 
-underline {
+.accesskey {
   text-decoration: underline;
 }
 main {

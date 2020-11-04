@@ -12,7 +12,7 @@
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h"><span class="accesskey">H</span>OME</a>
         </div>
     </header>
     <main>
