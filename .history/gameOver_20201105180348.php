@@ -10,7 +10,7 @@ session_start();
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/gameOver.css">
     <link rel="stylesheet" href="templates/general.css">
-    <audio id="lose" src="templates/assets/audio/avadakedavra.mp3" autoplay></audio>
+    <audio id="start" src="templates/assets/audio/avadakedavra.wav"></audio>
 </head>
 
 <body>

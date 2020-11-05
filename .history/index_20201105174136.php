@@ -11,7 +11,6 @@ session_start();
     <link rel="stylesheet" href="templates/index.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
-    <audio id="start" src="templates/assets/audio/Harry potter.mp3" autoplay></audio>
 </head>
 
 <body>

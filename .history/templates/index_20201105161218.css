@@ -106,9 +106,8 @@
 
 .audio {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-left: 70%;
+  float: right;
 }
 
 i {

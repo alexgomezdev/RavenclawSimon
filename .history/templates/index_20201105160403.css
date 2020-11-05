@@ -104,14 +104,6 @@
   font-size: 20px;
 }
 
-.audio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 70%;
-}
-
 i {
   color: white;
-  font-size: 25px;
 }

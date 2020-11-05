@@ -25,7 +25,7 @@ function choose(id) {
     }else{
         elem.classList.add('nice');
     }
-    document.getElementById('select').play();
+    document.getElementById('start').play();
 };
 
 function winorlose() {
@@ -45,8 +45,4 @@ function winorlose() {
 
 function start() {
     document.getElementById('start').play();
-};
-
-function solve() {
-    document.getElementById('solve').play();
 };

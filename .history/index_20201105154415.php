@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
+//prueba
 session_start();
 ?>
 
@@ -9,9 +10,6 @@ session_start();
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
-    <script type="text/javascript" src="js/index.js"></script>
-    <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
-    <audio id="start" src="templates/assets/audio/Harry potter.mp3" autoplay></audio>
 </head>
 
 <body>
@@ -78,6 +76,10 @@ session_start();
     <footer>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
+        </div>
+        <audio id="audio" src="./templates/assets/audio/ringtones-harry-potter.mp3"></audio>
+        <div>
+            <button onclick="document.getElementById('audio').play()"></button>
         </div>
     </footer>
 </body>

@@ -19,13 +19,12 @@ function showNices(){
     };
     
 function choose(id) {
-    var elem = document.getElementById(id);
+    var elem = document.getElementById(id)
     if (elem.classList.contains('nice')){
         elem.classList.remove('nice');
     }else{
         elem.classList.add('nice');
     }
-    document.getElementById('select').play();
 };
 
 function winorlose() {
@@ -45,8 +44,4 @@ function winorlose() {
 
 function start() {
     document.getElementById('start').play();
-};
-
-function solve() {
-    document.getElementById('solve').play();
 };

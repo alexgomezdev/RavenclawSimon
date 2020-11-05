@@ -105,7 +105,7 @@
 }
 
 .audio {
-  display: flex;
+  display: center;
   justify-content: center;
   align-items: center;
   margin-left: 70%;

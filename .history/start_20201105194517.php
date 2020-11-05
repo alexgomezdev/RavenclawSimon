@@ -13,7 +13,6 @@ session_start();
     <title>Ravenclaw Simon</title>
     <audio id="start" src="templates/assets/audio/start.wav"></audio>
     <audio id="select" src="templates/assets/audio/select.mp3"></audio>
-    <audio id="solve" src="templates/assets/audio/solve.mp3"></audio>
 </head>
 
 <body>
@@ -110,7 +109,7 @@ session_start();
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" accesskey="s" disabled>
-                    <h3>RE<underline class="accesskey" onclick="solve()">S</underline>OLVER</h3>
+                    <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
                 </button>
             </div>
         </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
+//prueba
 session_start();
 ?>
 
@@ -10,8 +11,6 @@ session_start();
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
     <script type="text/javascript" src="js/index.js"></script>
-    <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
-    <audio id="start" src="templates/assets/audio/Harry potter.mp3" autoplay></audio>
 </head>
 
 <body>
@@ -22,6 +21,12 @@ session_start();
         <div id="ranking_link_div">
             <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
         </div>
+        <div class="audio">
+            <audio id="audio" src="./templates/assets/audio/ringtones-harry-potter.mp3"></audio>
+            <div>
+                <p><i class="far fa-play-circle"></i></p>
+            </div>
+        </div>    
     </header>
     <main>
         <div id="title">

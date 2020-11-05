@@ -105,10 +105,10 @@
 }
 
 .audio {
-  display: flex;
-  justify-content: center;
+  display: center;
   align-items: center;
-  margin-left: 70%;
+  float: right;
+  margin-right: 5px;
 }
 
 i {
