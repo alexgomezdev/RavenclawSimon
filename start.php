@@ -18,6 +18,9 @@ session_start();
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h">HOME</a>
         </div>
+        <div id="colorblind_button_div">
+            <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
+        </div>
     </header>
     <div id="show_name">
         <?php
