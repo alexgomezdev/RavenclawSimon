@@ -14,6 +14,9 @@
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
         </div>
+        <div id="colorblind_button_div">
+            <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
+        </div>
     </header>
     <main>
         <div class="container">
@@ -46,7 +49,7 @@
                             return $item2['punctuation'] > $item1['punctuation'];
                         });
                         foreach ($users as $data) {
-                            echo "<tr><td>".$data["user"]."</td><td>".$data["punctuation"]." <img src='templates/assets/sapphire.png' alt='Sapphire'></td></tr>";
+                            echo "<tr><td>".$data["user"]."</td><td>".$data["punctuation"]." <img src='templates/assets/sapphire.png' alt='Sapphire' id='sapphire'></td></tr>";
                         }
                     ?>
                 </tbody>
