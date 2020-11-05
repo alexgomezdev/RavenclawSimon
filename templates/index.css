@@ -1,5 +1,6 @@
 #ranking_link_div {
-  margin-left: 6%;
+  float: left;
+  margin-left: 5%;
   padding-top: 9px;
   text-align: center;
   width: 3%;

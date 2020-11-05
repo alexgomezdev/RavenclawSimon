@@ -25,10 +25,11 @@ header {
   position: fixed;
   width: 100%;
   height: 60px;
-  display: inline-flex;
+  display: inline-flexbox;
 }
 
 #home_link_div {
+  float: left;
   margin-left: 3%;
   padding-top: 9px;
   text-align: center;
@@ -45,6 +46,27 @@ header {
   font-size: 20px;
   text-decoration: none;
   width: min-content;
+  height: 60%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#colorblind_button_div {
+  float: right;
+  margin-right: 4%;
+  padding-top: 9px;
+  width: 3%;
+  text-align: center;
+  height: 100%;
+}
+
+#colorblind_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
   height: 60%;
   margin-top: 10%;
   margin-bottom: 10%;

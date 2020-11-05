@@ -3,7 +3,7 @@
 <?php
 session_start();
 ?>
-
+<!-- onclick='colorblindMode()' -->
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
@@ -13,7 +13,6 @@ session_start();
     <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
     <audio id="start" src="templates/assets/audio/Harry potter.mp3" autoplay></audio>
 </head>
-
 <body>
     <header>
         <div id="home_link_div">
@@ -21,6 +20,9 @@ session_start();
         </div>
         <div id="ranking_link_div">
             <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
+        </div>
+        <div id="colorblind_button_div">
+            <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
     <main>
