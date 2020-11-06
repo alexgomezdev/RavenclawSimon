@@ -1,13 +1,20 @@
 Principal colors {
-    Dark blue --> Hex - #0e1a40 or RGB - (14,26,64)
-    Blue --> Hex - 	#222f5b or RGB - (34,47,91)
+    Dark blue --> Hex - #0e1a40 or RGB - (14,26,64) -- Color-blind -- #2D044C or rgb(12, 0, 59)
+    Blue --> Hex - 	#222f5b or RGB - (34,47,91) -- Color-blind -- #6C1AB2 or rgb(12, 36, 105)
     Grey --> Hex - #5d5d5d or RGB - (93,93,93)
-    Brown --> Hex - #946b2d or RGB - (148,107,45)
+    Brown --> Hex - #946b2d or RGB - (148,107,45)  -- Color-blind -- #b98803 or rgb(185, 136, 3)
     Black --> Hex - #000000 or RGB - (0,0,0)
 }
 
 Extra colors {
-    Red (error) --> Hex - #ff3333 or RGB - (255,51,51)
+    Red (error) --> Hex - #ff3333 or RGB - (255,51,51) -- Color-blind -- #ff4500 or rgb(255, 69, 0)
     Green (succes) --> Hex - #6cc070 or RGB - (108,192,112)
     White (text normally) --> Hex - #ffffff or RGB - (255,255,255)
+}
+
+Quidditch mode colors {
+    Ravenclaw --> Hex - #946b2d or RGB - (148, 107, 45)
+    Gryffindor --> Hex - #ae0001 or RGB - (174, 0, 1)
+    Hufflepuff --> Hex - #000000 or RGB - (0, 0, 0)
+    Slytherin --> Hex - #2a623d or RGB - (42, 98, 61)
 }

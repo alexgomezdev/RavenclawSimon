@@ -4,22 +4,22 @@
 //prueba
 session_start();
 ?>
-<!-- onclick='colorblindMode()' -->
 <head>
     <meta charset="UTF-8">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
+    <script src="js/colorblind.js"></script>
 </head>
-<body>
-    <header>
+<body class="body">
+    <header class="header">
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h">HOME</a>
+            <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
         <div id="ranking_link_div">
-            <a href="ranking.php" id="ranking_link" accesskey="r">RANKING</a>
+            <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
         </div>
-        <div id="colorblind_button_div">
+        <div class="colorblind_button_div" onclick="change_colorblind()">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
@@ -28,8 +28,11 @@ session_start();
             <h1>Ravenclaw Simon</h1>
         </div>
         <div class="container">
-            <div id="img">
+            <div id="img_home_div">
                 <img src="templates/assets/home_img.png" alt="Simon Game">
+            </div>
+            <div id="img_home_blindcolor_div">
+                <img src="templates/assets/home_img_colorblind.png" alt="Simon Game">
             </div>
             <div id="manual">
                 <p id="manual_paragraph">
@@ -70,12 +73,12 @@ session_start();
             </div>
             <div id="button_div">
                 <button id="button_play" accesskey="j">
-                    <h3>JUGAR</h3>
+                    <h3><underline class='accesskey'>J</underline>UGAR</h3>
                 </button>
             </div>
         </form>
     </main>
-    <footer>
+    <footer class="footer">
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>

@@ -5,7 +5,6 @@ function hideNices (){
     }
     document.getElementById("solve_button").removeAttribute('disabled');
     var clickable = document.getElementsByClassName('tg');
-    var clickable = document.getElementsByClassName('tg');
     for (const x of clickable) {
         x.setAttribute('onclick', 'choose(this.id)');
     }
