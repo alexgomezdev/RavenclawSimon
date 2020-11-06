@@ -69,7 +69,7 @@ session_start();
             var segons = <?php echo $segons; ?>
             
         </script>
-         <div class="timer">
+         <div class="counter">
             <p>Tiempo: <span id="countdown"></span></p>
         </div>
     </div>

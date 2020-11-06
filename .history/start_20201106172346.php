@@ -69,8 +69,8 @@ session_start();
             var segons = <?php echo $segons; ?>
             
         </script>
-         <div class="timer">
-            <p>Tiempo: <span id="countdown"></span></p>
+         <div class="counter">
+            <span id="countdown"></span>
         </div>
     </div>
     <script src="js/playing.js"></script>
@@ -112,7 +112,7 @@ session_start();
         </div>
                <div class=" ds-flex just-space-around">
             <div id="button_div">
-                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); start()" accesskey="i">
+                <button class="button_play" onclick="showNices(); updateClock(); start()" accesskey="i">
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" accesskey="s" disabled>
@@ -126,6 +126,7 @@ session_start();
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>
     </footer>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

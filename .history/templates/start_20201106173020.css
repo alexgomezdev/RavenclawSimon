@@ -52,10 +52,8 @@ table {
 .choosed {
   background-color: aqua;
 }
-.counter {
+p {
   font-family: "Harry_Potter";
-  color: white;
-  width: 100%;
 }
 .counter {
   text-align: center;

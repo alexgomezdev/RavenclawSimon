@@ -52,15 +52,11 @@ table {
 .choosed {
   background-color: aqua;
 }
-.counter {
-  font-family: "Harry_Potter";
-  color: white;
-  width: 100%;
-}
+
 .counter {
   text-align: center;
   margin-top: 2%;
   font-size: 40px;
-  font-family: "Harry_Potter";
+  font-family: "Dumbledore";
   color: white;
 }

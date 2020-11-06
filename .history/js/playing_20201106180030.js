@@ -53,11 +53,11 @@ function solve() {
 
 var totalTime = segons / 1000;
 function updateClock() {
-    document.getElementById('countdown').innerHTML = totalTime;
-    if(totalTime==0){
-        
-    }else{
-        totalTime-=1;
-        setTimeout("updateClock()",1000);
-    }
+document.getElementById('countdown').innerHTML = totalTime;
+if(totalTime==0){
+    
+}else{
+totalTime-=1;
+setTimeout("updateClock()",1000);
+}
 }

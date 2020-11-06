@@ -10,14 +10,14 @@ function hideNices (){
         x.setAttribute('onclick', 'choose(this.id)');
     }
     startTime =new Date();
-    document.getElementById("start_game_button").setAttribute('disabled', false);
 };
 function showNices(){
     for (const x of tdscorrects) {
             x.classList.add('nice'); 
         }
-    setTimeout(hideNices,segons)
-};
+    setTimeout(hideNices,4000)
+
+    };
     
 function choose(id) {
     var elem = document.getElementById(id);
@@ -41,6 +41,7 @@ function winorlose() {
     }else{
         window.open("gameOver.php", "_self");
     }
+    // alert(playResut.length);
 };
 
 function start() {
@@ -51,13 +52,13 @@ function solve() {
     document.getElementById('solve').play();
 };
 
-var totalTime = segons / 1000;
+var totalTime = "Tiempo ". segons / 1000 + 1;
 function updateClock() {
-    document.getElementById('countdown').innerHTML = totalTime;
-    if(totalTime==0){
-        
-    }else{
-        totalTime-=1;
-        setTimeout("updateClock()",1000);
-    }
+document.getElementById('countdown').innerHTML = totalTime;
+if(totalTime==0){
+    
+}else{
+totalTime-=1;
+setTimeout("updateClock()",1000);
+}
 }
