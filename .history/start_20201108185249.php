@@ -115,8 +115,8 @@ session_start();
                 <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); start()" accesskey="i">
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
                 </button>
-                <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>
-                    <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
+                <button class="button_play" id="solve_button" onclick="winorlose()" accesskey="s" disabled>
+                    <h3>RE<underline class="accesskey" onmouseover="solve()">S</underline>OLVER</h3>
                 </button>
             </div>
         </div>
