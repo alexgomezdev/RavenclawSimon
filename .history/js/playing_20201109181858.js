@@ -5,6 +5,7 @@ function hideNices (){
     }
     document.getElementById("solve_button").removeAttribute('disabled');
     var clickable = document.getElementsByClassName('tg');
+    var clickable = document.getElementsByClassName('tg');
     for (const x of clickable) {
         x.setAttribute('onclick', 'choose(this.id)');
     }
@@ -62,11 +63,11 @@ function move() {
       } else {
         width++; 
         elem.style.width = width + '%'; 
+        updateClock(totalTime);
       }// 
     }
 }
-
-function updateClock() {
+function updateClock(totalTime) {
     document.getElementById('label').innerHTML = totalTime;
     if(totalTime==0){
         

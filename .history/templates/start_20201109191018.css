@@ -64,6 +64,7 @@ table {
   font-size: 25px;
   font-family: "Harry_Potter";
   color: white;
+  border-radius: 2px;
 }
 
 #progress {
@@ -73,15 +74,13 @@ table {
   background-color: #ffffff;
   margin: 0 auto;
   margin-bottom: 5%;
-  border-radius: 7px;
 }
 #bar {
   position: absolute;
   width: 0%;
   height: 100%;
   background-color: #946b2d;
-  border-radius: 5px;
 }
 #label {
-  padding-top: 3px;
+  padding-top: 2px;
 }

@@ -3,6 +3,7 @@
 session_start();
 ?>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,27 +14,14 @@ session_start();
     <audio id="start" src="templates/assets/audio/start.wav"></audio>
     <audio id="select" src="templates/assets/audio/select.mp3"></audio>
     <audio id="solve" src="templates/assets/audio/revelio.mp3"></audio>
-    <script src="js/colorblind.js"></script>
 </head>
-<?php 
-    if (isset($_POST['colorblind_data'])) {
-            $_SESSION['colorblind-data'] = $_POST['colorblind_data'];
-        }
-?>
-<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'body'";
-        } else {
-            echo "class = 'body-blindcolor'";
-        } ?>>
-    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'header'";
-        } else {
-            echo "class = 'header-blindcolor'";
-        } ?>>
+
+<body>
+    <header>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
         </div>
-        <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
+        <div id="colorblind_button_div">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
@@ -83,15 +71,13 @@ session_start();
         </script>
     </div>
     <div id="timer">
-        <div id="progress">
-            <div id="bar">
-                <div id="label"></div>
-            </div>
-        </div>    
+        <div id="bar">
+            <div id="label">Tiempo: 4</div>
+        </div>
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
-        <div>
+        <div class="table">
             <?php
 
             for ($m = 1; $m <= $nivel[2]; $m++) {
@@ -107,7 +93,7 @@ session_start();
 
             $cont = 0;
             //echo "<PRE>" . var_export($nivel, true) . "</PRE>";
-            
+
             echo " <table class='tg'><tbody>";
             for ($i = 1; $i <= $filas[0]; $i++) {
                 echo "<tr>";
@@ -128,7 +114,7 @@ session_start();
         </div>
                <div class=" ds-flex just-space-around">
             <div id="button_div">
-                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); move(); start()" accesskey="i">
+                <button class="button_play" id="start_game_button" onclick="showNices(); move(); start()" accesskey="i">
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>
@@ -137,14 +123,11 @@ session_start();
             </div>
         </div>
     </div>
-    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'footer'";
-        } else {
-            echo "class = 'footer-blindcolor'";
-        } ?>>
+    <footer>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>
     </footer>
 </body>
+
 </html>

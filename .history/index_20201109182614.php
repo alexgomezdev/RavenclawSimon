@@ -3,33 +3,25 @@
 <?php
 session_start();
 ?>
+<!-- onclick='colorblindMode()' -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
     <audio id="start" src="templates/assets/audio/Harry potter.mp3" autoplay></audio>
-    <script src="js/colorblind_home.js"></script>
 </head>
-<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
-            echo "class = 'body-blindcolor'";
-        } else {
-            echo "class = 'body'";
-        } ?>>
-    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
-            echo "class = 'header-blindcolor'";
-        } else {
-            echo "class = 'header'";
-        } ?>>
+<body>
+    <header>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
         <div id="ranking_link_div">
             <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
         </div>
-        <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
+        <div id="colorblind_button_div">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
@@ -38,7 +30,7 @@ session_start();
             <h1>Ravenclaw Simon</h1>
         </div>
         <div class="container">
-            <div id="img_home_div">
+            <div id="img">
                 <img src="templates/assets/home_img.png" alt="Simon Game">
             </div>
             <div id="manual">
@@ -69,15 +61,14 @@ session_start();
                 }
                 ?>
             </div>
-            <input type="hidden" id="colorblind_data" name="colorblind_data" value="False">
             <div id="level_introduction">
                 <label for="username">Código de nivel: </label><input type="text" id="level" name="level" />
             </div>
             <div id="games_type">
                 <input type="checkbox" class="checkbox" id="lier" name="lier">
-                <label for="lier" title="Modo mentiroso">MODO IMPOSTORUS</label>
+                <label for="lier" title="Modo mentiroso">MODO HORROCRUX</label>
                 <input type="checkbox" class="checkbox" id="survive" name="survive">
-                <label for="survive" title="Modo supervivencia">MODO HORROCRUX</label>
+                <label for="survive" title="Modo supervivencia">MODO IMPOSTORUS</label>
             </div>
             <div id="button_div">
                 <button id="button_play" accesskey="g">
@@ -86,14 +77,11 @@ session_start();
             </div>
         </form>
     </main>
-    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
-            echo "class = 'footer-blindcolor'";
-        } else {
-            echo "class = 'footer'";
-        } ?>>
+    <footer>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>
     </footer>
 </body>
+
 </html>

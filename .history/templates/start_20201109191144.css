@@ -73,7 +73,7 @@ table {
   background-color: #ffffff;
   margin: 0 auto;
   margin-bottom: 5%;
-  border-radius: 7px;
+  border-radius: 15px;
 }
 #bar {
   position: absolute;
@@ -83,5 +83,5 @@ table {
   border-radius: 5px;
 }
 #label {
-  padding-top: 3px;
+  padding-top: 2px;
 }

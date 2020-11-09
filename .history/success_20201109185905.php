@@ -11,27 +11,14 @@ session_start();
     <link rel="stylesheet" href="templates/success.css">
     <link rel="stylesheet" href="templates/general.css">
     <audio id="lose" src="templates/assets/audio/success.mp3" autoplay></audio>
-    <script src="js/colorblind.js"></script>
 </head>
-<?php 
-    if (isset($_POST['colorblind_data'])) {
-            $_SESSION['colorblind-data'] = $_POST['colorblind_data'];
-        }
-?>
-<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'body'";
-        } else {
-            echo "class = 'body-blindcolor'";
-        } ?>>
-    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'header'";
-        } else {
-            echo "class = 'header-blindcolor'";
-        } ?>>
+
+<body>
+    <header>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
         </div>
-        <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
+        <div id="colorblind_button_div">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
@@ -58,10 +45,10 @@ session_start();
         </div>
 
         <div id="button_div">
-            <button class="button_play" onclick="location.href='start.php?do=tryagain'" accesskey="v">
+            <button class="button_play" onclick="location.href='start.php?do=tryagain;'" accesskey="v">
                 <h3><underline class="accesskey">V</underline>OLVER A PROVAR</h3>
             </button>
-            <button class="button_play" onclick="location.href='start.php?do=next'" accesskey="n">
+            <button class="button_play" onclick="location.href='start.php?do=next;'" accesskey="n">
                 <h3>SIGUIENTE <underline class="accesskey">N</underline>IVEL</h3>
             </button>
             <button class="button_play" onclick="location.href='ranking.php?do=save'" accesskey="g">
@@ -69,11 +56,7 @@ session_start();
             </button>
         </div>
     </main>
-    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'footer'";
-        } else {
-            echo "class = 'footer-blindcolor'";
-        } ?>>
+    <footer>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>

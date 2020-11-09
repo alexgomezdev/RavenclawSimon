@@ -54,34 +54,22 @@ table {
 }
 
 #timer {
-  font-family: "Harry_Potter";
-  color: white;
-  width: 100%;
-}
-#timer {
-  text-align: center;
-  margin-top: 2%;
-  font-size: 25px;
-  font-family: "Harry_Potter";
-  color: white;
-}
-
-#progress {
   position: relative;
   width: 20%;
   height: 30px;
   background-color: #ffffff;
   margin: 0 auto;
   margin-bottom: 5%;
-  border-radius: 7px;
 }
 #bar {
   position: absolute;
   width: 0%;
   height: 100%;
   background-color: #946b2d;
-  border-radius: 5px;
 }
 #label {
-  padding-top: 3px;
+  text-align: center; /* If you want to center it */
+  line-height: 30px; /* Set the line-height to the same as the height of the progress bar container, to center it vertically */
+  color: white;
+  font-size: 25px;
 }

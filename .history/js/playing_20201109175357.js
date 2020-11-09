@@ -5,6 +5,7 @@ function hideNices (){
     }
     document.getElementById("solve_button").removeAttribute('disabled');
     var clickable = document.getElementsByClassName('tg');
+    var clickable = document.getElementsByClassName('tg');
     for (const x of clickable) {
         x.setAttribute('onclick', 'choose(this.id)');
     }
@@ -50,28 +51,20 @@ function solve() {
     document.getElementById('solve').play();
 };
 
-var totalTime = segons /1000;
+var totalTime = segons *10;
 
 function move() {
     var elem = document.getElementById("bar");   
     var width = 0;
-    var id = setInterval(frame, segons/100);
+    var id = setInterval(frame, 40);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
       } else {
         width++; 
         elem.style.width = width + '%'; 
-      }// 
+        document.getElementById("label").innerHTML = segons;
+      }
     }
-}
-
-function updateClock() {
-    document.getElementById('label').innerHTML = totalTime;
-    if(totalTime==0){
-        
-    }else{
-        totalTime-=1;
-        setTimeout("updateClock(totalTime)",1000);
-    }
-}
+  }
+  
