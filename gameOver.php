@@ -10,15 +10,17 @@ session_start();
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/gameOver.css">
     <link rel="stylesheet" href="templates/general.css">
+    <script src="js/colorblind.js"></script>
 </head>
 
-<body>
-    <header>
+<body id="body" class="body">
+    <header id="header" class="header">
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h">HOME</a>
+            <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
-        <div id="colorblind_button_div">
+        <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
+            <?php $_SESSION['daltonico'] = "<script> document.writeln(daltonico); </script>"; ?>
         </div>
     </header>
     <main>
@@ -48,7 +50,7 @@ session_start();
             </button>
         </div>
     </main>
-    <footer>
+    <footer id="footer" class="footer">
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>

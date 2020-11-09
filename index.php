@@ -9,17 +9,17 @@ session_start();
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/index.css">
-    <script src="js/colorblind.js"></script>
+    <script src="js/colorblind_home.js"></script>
 </head>
-<body class="body">
-    <header class="header">
+<body id="body" class="body">
+    <header id="header" class="header">
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
         <div id="ranking_link_div">
             <a href="ranking.php" id="ranking_link" accesskey="r"><underline class='accesskey'>R</underline>ANKING</a>
         </div>
-        <div class="colorblind_button_div" onclick="change_colorblind()">
+        <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
@@ -62,14 +62,15 @@ session_start();
                 }
                 ?>
             </div>
+            <input type="hidden" id="colorblind_data" name="colorblind_data" value="False">
             <div id="level_introduction">
                 <label for="username">Código de nivel: </label><input type="text" id="level" name="level" />
             </div>
             <div id="games_type">
                 <input type="checkbox" class="checkbox" id="lier" name="lier">
-                <label for="lier" title="Modo mentiroso">MODO HORROCRUX</label>
+                <label for="lier" title="Modo mentiroso">MODO IMPOSTORUS</label>
                 <input type="checkbox" class="checkbox" id="survive" name="survive">
-                <label for="survive" title="Modo supervivencia">MODO IMPOSTORUS</label>
+                <label for="survive" title="Modo supervivencia">MODO HORROCRUX</label>
             </div>
             <div id="button_div">
                 <button id="button_play" accesskey="j">
@@ -78,11 +79,10 @@ session_start();
             </div>
         </form>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>
     </footer>
 </body>
-
 </html>

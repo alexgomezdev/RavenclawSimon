@@ -4,9 +4,11 @@ var daltonico = 0;
 function click_colorblind() {
     if (daltonico == 0) {
         daltonico = 1;
+        document.getElementById("colorblind_data").value = "True";
         change_colorblind(daltonico);
     } else {
         daltonico = 0;
+        document.getElementById("colorblind_data").value = "False";
         change_colorblind(daltonico);
     }
 }
@@ -15,6 +17,7 @@ function change_colorblind(id) {
     change_body(id);
     change_header(id);
     change_footer(id);
+    change_image(id);
 }
 
 function change_body (id){
