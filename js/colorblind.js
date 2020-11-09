@@ -46,13 +46,3 @@ function change_footer (id){
         document.getElementById("footer").setAttribute("class", "footer");
     }
 }
-
-function change_image(id) {
-    if (id == 1) {
-        document.getElementById("img_home_div").style.display = "none";
-        document.getElementById("img_home_blindcolor_div").style.display = "inline";
-    } else {
-        document.getElementById("img_home_div").style.display = "inline";
-        document.getElementById("img_home_blindcolor_div").style.display = "none";
-    }
-}

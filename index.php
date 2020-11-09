@@ -11,8 +11,16 @@ session_start();
     <link rel="stylesheet" href="templates/index.css">
     <script src="js/colorblind_home.js"></script>
 </head>
-<body id="body" class="body">
-    <header id="header" class="header">
+<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
+            echo "class = 'body-blindcolor'";
+        } else {
+            echo "class = 'body'";
+        } ?>>
+    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
+            echo "class = 'header-blindcolor'";
+        } else {
+            echo "class = 'header'";
+        } ?>>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
@@ -30,9 +38,6 @@ session_start();
         <div class="container">
             <div id="img_home_div">
                 <img src="templates/assets/home_img.png" alt="Simon Game">
-            </div>
-            <div id="img_home_blindcolor_div">
-                <img src="templates/assets/home_img_colorblind.png" alt="Simon Game">
             </div>
             <div id="manual">
                 <p id="manual_paragraph">
@@ -79,7 +84,11 @@ session_start();
             </div>
         </form>
     </main>
-    <footer id="footer" class="footer">
+    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
+            echo "class = 'footer-blindcolor'";
+        } else {
+            echo "class = 'footer'";
+        } ?>>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>

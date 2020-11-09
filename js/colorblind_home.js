@@ -17,7 +17,6 @@ function change_colorblind(id) {
     change_body(id);
     change_header(id);
     change_footer(id);
-    change_image(id);
 }
 
 function change_body (id){
@@ -47,15 +46,5 @@ function change_footer (id){
     } else {
         document.getElementById("footer").removeAttribute("class", "footer-blindcolor");
         document.getElementById("footer").setAttribute("class", "footer");
-    }
-}
-
-function change_image(id) {
-    if (id == 1) {
-        document.getElementById("img_home_div").style.display = "none";
-        document.getElementById("img_home_blindcolor_div").style.display = "inline";
-    } else {
-        document.getElementById("img_home_div").style.display = "inline";
-        document.getElementById("img_home_blindcolor_div").style.display = "none";
     }
 }

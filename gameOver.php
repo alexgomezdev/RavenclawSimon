@@ -13,14 +13,21 @@ session_start();
     <script src="js/colorblind.js"></script>
 </head>
 
-<body id="body" class="body">
-    <header id="header" class="header">
+<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
+            echo "class = 'body'";
+        } else {
+            echo "class = 'body-blindcolor'";
+        } ?>>
+    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
+            echo "class = 'header'";
+        } else {
+            echo "class = 'header-blindcolor'";
+        } ?>>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
         <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
-            <?php $_SESSION['daltonico'] = "<script> document.writeln(daltonico); </script>"; ?>
         </div>
     </header>
     <main>
@@ -50,7 +57,11 @@ session_start();
             </button>
         </div>
     </main>
-    <footer id="footer" class="footer">
+    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
+            echo "class = 'footer'";
+        } else {
+            echo "class = 'footer-blindcolor'";
+        } ?>>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>

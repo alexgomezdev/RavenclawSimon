@@ -3,7 +3,6 @@
 session_start();
 ?>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="templates/lib.css">
     <link rel="stylesheet" href="templates/start.css">
@@ -13,8 +12,21 @@ session_start();
     <script src="js/colorblind.js"></script>
     <title>Ravenclaw Simon</title>
 </head>
-<body id="body" class="body">
-    <header id="header" class="header">
+<?php 
+    if (isset($_POST['colorblind_data'])) {
+            $_SESSION['colorblind-data'] = $_POST['colorblind_data'];
+        }
+?>
+<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
+            echo "class = 'body'";
+        } else {
+            echo "class = 'body-blindcolor'";
+        } ?>>
+    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
+            echo "class = 'header'";
+        } else {
+            echo "class = 'header-blindcolor'";
+        } ?>>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class='accesskey'>H</underline>OME</a>
         </div>
@@ -69,7 +81,7 @@ session_start();
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
-        <div class="table">
+        <div>
             <?php
 
             for ($m = 1; $m <= $nivel[2]; $m++) {
@@ -85,7 +97,7 @@ session_start();
 
             $cont = 0;
             //echo "<PRE>" . var_export($nivel, true) . "</PRE>";
-
+            
             echo " <table class='tg'><tbody>";
             for ($i = 1; $i <= $filas[0]; $i++) {
                 echo "<tr>";
@@ -115,16 +127,15 @@ session_start();
             </div>
         </div>
     </div>
-    <footer id="footer" class="footer">
+    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
+            echo "class = 'footer'";
+        } else {
+            echo "class = 'footer-blindcolor'";
+        } ?>>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>
     </footer>
-    <?php
-    if ($_POST['colorblind_data'] == "True") {
-        echo "<script type='text/javascript'>document.onload(click_colorblind());</script>";
-    }
-    ?>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
