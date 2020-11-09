@@ -29,12 +29,22 @@
   width: 100%;
 }
 
-#img {
+#img_home_div {
   padding-top: 1%;
   text-align: right;
   width: 48%;
   height: 100%;
   margin-right: 2%;
+  display: inline;
+}
+
+#img_home_blindcolor_div {
+  padding-top: 1%;
+  text-align: right;
+  width: 48%;
+  height: 100%;
+  margin-right: 2%;
+  display: none;
 }
 
 #manual {
