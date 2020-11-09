@@ -71,6 +71,7 @@ session_start();
         </script>
     </div>
     <div id="timer">
+    <p>Tiempo: <span id="countdown"></span></p>
         <div id="progress">
             <div id="bar">
                 <div id="label"></div>

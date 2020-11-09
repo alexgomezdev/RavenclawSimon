@@ -51,28 +51,28 @@ function solve() {
     document.getElementById('solve').play();
 };
 
-var totalTime = segons /1000;
+var totalTime = segons / 1000;
 
 function move() {
     var elem = document.getElementById("bar");   
-    var width = 0;
-    var id = setInterval(frame, segons/100);
+    var width = 1;
+    var id = setInterval(frame, 10);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
       } else {
         width++; 
         elem.style.width = width + '%'; 
-      }// 
+        document.getElementById("label").innerHTML = totalTime-=1;
+        document.getElementById('countdown').innerHTML = totalTime;
+        if(totalTime==0){
+            
+        }else{
+            totalTime-=1;
+            setTimeout("move()",1000);
+        }
     }
-}
-
-function updateClock() {
-    document.getElementById('label').innerHTML = totalTime;
-    if(totalTime==0){
-        
-    }else{
-        totalTime-=1;
-        setTimeout("updateClock(totalTime)",1000);
+      }
     }
-}
+  }
+  

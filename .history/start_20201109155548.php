@@ -69,13 +69,10 @@ session_start();
             var segons = <?php echo $segons; ?>
             
         </script>
-    </div>
-    <div id="timer">
-        <div id="progress">
-            <div id="bar">
-                <div id="label"></div>
-            </div>
-        </div>    
+        <div id="timer">
+            <p>Tiempo: </p>
+            <div id="bar"></div>
+        </div>
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
@@ -116,7 +113,7 @@ session_start();
         </div>
                <div class=" ds-flex just-space-around">
             <div id="button_div">
-                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); move(); start()" accesskey="i">
+                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); start()" accesskey="i">
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>

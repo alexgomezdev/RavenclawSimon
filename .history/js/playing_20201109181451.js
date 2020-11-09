@@ -63,16 +63,14 @@ function move() {
       } else {
         width++; 
         elem.style.width = width + '%'; 
+        updateClock(totalTime);
       }// 
     }
 }
-
-function updateClock() {
+function updateClock(totalTime) {
     document.getElementById('label').innerHTML = totalTime;
-    if(totalTime==0){
-        
-    }else{
+    if(!totalTime==0){
         totalTime-=1;
-        setTimeout("updateClock(totalTime)",1000);
+        setTimeout("updateClock()",1);
     }
 }

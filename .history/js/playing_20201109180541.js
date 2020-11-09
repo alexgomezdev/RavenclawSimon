@@ -51,7 +51,7 @@ function solve() {
     document.getElementById('solve').play();
 };
 
-var totalTime = segons /1000;
+var totalTime = segons /10000;
 
 function move() {
     var elem = document.getElementById("bar");   
@@ -63,16 +63,16 @@ function move() {
       } else {
         width++; 
         elem.style.width = width + '%'; 
+        updateClock();
       }// 
     }
 }
-
 function updateClock() {
     document.getElementById('label').innerHTML = totalTime;
     if(totalTime==0){
         
     }else{
         totalTime-=1;
-        setTimeout("updateClock(totalTime)",1000);
+        setTimeout("updateClock()",1000);
     }
 }

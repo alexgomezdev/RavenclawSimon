@@ -51,11 +51,11 @@ function solve() {
     document.getElementById('solve').play();
 };
 
-var totalTime = segons /1000;
 
 function move() {
     var elem = document.getElementById("bar");   
     var width = 0;
+    var totalTime = segons / 1000;
     var id = setInterval(frame, segons/100);
     function frame() {
       if (width >= 100) {
@@ -63,16 +63,8 @@ function move() {
       } else {
         width++; 
         elem.style.width = width + '%'; 
-      }// 
+        document.getElementById("label").innerHTML = totalTime;
+      }
     }
-}
-
-function updateClock() {
-    document.getElementById('label').innerHTML = totalTime;
-    if(totalTime==0){
-        
-    }else{
-        totalTime-=1;
-        setTimeout("updateClock(totalTime)",1000);
-    }
-}
+  }
+  

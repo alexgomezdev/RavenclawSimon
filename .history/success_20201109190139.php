@@ -45,7 +45,7 @@ session_start();
         </div>
 
         <div id="button_div">
-            <button class="button_play" onclick="location.href='start.php?do=tryagain'" accesskey="v">
+            <button class="button_play" onclick="location.href='start.php?do=tryagain;'" accesskey="v">
                 <h3><underline class="accesskey">V</underline>OLVER A PROVAR</h3>
             </button>
             <button class="button_play" onclick="location.href='start.php?do=next'" accesskey="n">

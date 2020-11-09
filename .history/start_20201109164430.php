@@ -71,11 +71,9 @@ session_start();
         </script>
     </div>
     <div id="timer">
-        <div id="progress">
-            <div id="bar">
-                <div id="label"></div>
-            </div>
-        </div>    
+        <div id="bar">
+            <div id="label">4</div>
+        </div>
     </div>
     <script src="js/playing.js"></script>
     <div class=" maxwd just-cont-center ds-flex">
@@ -116,7 +114,7 @@ session_start();
         </div>
                <div class=" ds-flex just-space-around">
             <div id="button_div">
-                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); move(); start()" accesskey="i">
+                <button class="button_play" id="start_game_button" onclick="showNices(); move(); start()" accesskey="i">
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>
