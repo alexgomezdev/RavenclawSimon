@@ -14,15 +14,15 @@ session_start();
     <script src="js/colorblind.js"></script>
 </head>
 
-<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'body'";
-        } else {
+<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
             echo "class = 'body-blindcolor'";
-        } ?>>
-    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'header'";
         } else {
+            echo "class = 'body'";
+        } ?>>
+    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
             echo "class = 'header-blindcolor'";
+        } else {
+            echo "class = 'header'";
         } ?>>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
@@ -58,10 +58,10 @@ session_start();
             </button>
         </div>
     </main>
-    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'footer'";
-        } else {
+    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
             echo "class = 'footer-blindcolor'";
+        } else {
+            echo "class = 'footer'";
         } ?>>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
