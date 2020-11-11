@@ -62,7 +62,7 @@ session_start();
                 ?>
             </div>
             <div id="level_introduction">
-                <label for="username">Código de nivel: </label><input type="text" id="level" name="level" />
+                <label for="level">Código de nivel: </label><input type="text" id="level" name="level" />
             </div>
             <div id="games_type">
                 <input type="checkbox" class="checkbox" id="lier" name="lier">

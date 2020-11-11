@@ -8,18 +8,18 @@ $randArray = [];
 $randNum = [];
 $segons = $nivel[3] * 1000;
 if (isset($_POST['level'])) {
-    $level = $_POST['level'];
-    foreach ($archivo as $arrayline){
-        $b = explode(";",$arrayline);
-        echo "<PRE>" . print_r($b, true) . "</PRE>";
-        if (in_array("AZ21",$b,true)){
-            echo "<PRE>" . print_r('Si que esta', true) . "</PRE>";
+    $code = $_POST['level'];
+    foreach ($archivo as $linea){
+        $pos = strpos($linea, 'AA11') ;
+        if ($pos !==  false){
+            echo "<PRE>" . print_r('La cadena se encontro', true) . "</PRE>";
+            $keyCode = array_search('AA11', $)
+            break;
         }
-        //if (in_array('AA11')){
-          //  $numline = array_search($arrayline, $archivo);
-                }
-        //}
-        //echo "<PRE>" . print_r($arrayline, true) . "</PRE>";    }
+
+        //echo "<PRE>" . print_r($linea, true) . "</PRE>";
+    }
+    
 }
 //header()
 ?>
