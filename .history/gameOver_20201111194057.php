@@ -53,7 +53,7 @@ session_start();
             <button class="button_play" onclick="location.href='start.php?do=tryagain'" accesskey="v">
                 <h3><underline class="accesskey">V</underline>OLVER A PROVAR</h3>
             </button>
-            <button class="button_play" onclick="location.href='ranking.php?do=save'" accesskey="g" <?php if (isset($_SESSION['rankPoints'])){
+            <button class="button_play" onclick="location.href='ranking.php?do=save'" accesskey="g" <?php if (isset($_SESSION['rankPoints']){
                 $_SESSION['rankPoints'] = $_SESSION['rankPoints'] - 1000;
             }?>>
                 <h4><underline class="accesskey">G</underline>UARDAR PUNTUACIÓN</h4>

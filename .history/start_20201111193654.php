@@ -66,7 +66,7 @@ session_start();
             $_SESSION['lvl'] = 0;
         }
         if (!isset($_SESSION['rankPoints'])) {
-            $_SESSION['rankPoints'] = 1000;
+            $_SESSION['rankPoints'] = 0;
         }
         $archivo = file('templates/config.txt');
         $nivel = explode(";", $archivo[$_SESSION['lvl']]);
