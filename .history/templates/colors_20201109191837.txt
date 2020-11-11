@@ -11,7 +11,8 @@ Extra colors {
     Green (succes) --> Hex - #6cc070 or RGB - (108,192,112)
     White (text normally) --> Hex - #ffffff or RGB - (255,255,255)
 }
-Impostorus mode colors {
+
+Quidditch mode colors {
     Ravenclaw --> Hex - #946b2d or RGB - (148, 107, 45)
     Gryffindor --> Hex - #ae0001 or RGB - (174, 0, 1)
     Hufflepuff --> Hex - #000000 or RGB - (0, 0, 0)

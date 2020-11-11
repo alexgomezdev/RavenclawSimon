@@ -61,7 +61,7 @@ session_start();
             <button class="button_play" onclick="location.href='start.php?do=tryagain'" accesskey="v">
                 <h4><underline class="accesskey">V</underline>OLVER A PROVAR</h4>
             </button>
-            <button class="button_play" onclick="location.href='start.php?do=next'" accesskey="n" <?php if (isset($_SESSION['lvl']) && $_SESSION['lvl'] == 9) {
+            <button class="button_play" onclick="location.href='start.php?do=next'" accesskey="n" <?php if (isset($_SESSION['lvl']) && $_SESSION['lvl'] == 10) {
                 echo "disabled";
                 }
             ?>>
