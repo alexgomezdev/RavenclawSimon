@@ -71,7 +71,7 @@ session_start();
             </div>
             <input type="hidden" id="colorblind_data" name="colorblind_data" value="False">
             <div id="level_introduction">
-                <label for="username">Código de nivel: </label><input type="text" id="level" name="level" />
+                <label for="level">Código de nivel: </label><input type="text" id="level" name="level" />
             </div>
             <div id="games_type">
                 <input type="checkbox" class="checkbox" id="lier" name="lier">
