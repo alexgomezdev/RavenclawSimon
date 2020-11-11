@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php
+if (isset($_POST['lier'])){
+    $lier = 1;
+}
 session_start();
 $archivo = file('templates/config.txt');
 
@@ -110,12 +113,11 @@ if (isset($_POST['level'])) {
         ?>
         <script type="text/javascript">
             var segons = <?php echo $segons; ?>
+            var lier = <?php echo $lier; ?>
         </script>
-<<<<<<< HEAD
         <div class="timer">
             <p>Tiempo: <span id="countdown"></span></p>
         </div>
-=======
     </div>
     <div id="timer">
         <div id="progress">
@@ -123,7 +125,6 @@ if (isset($_POST['level'])) {
                 <div id="label"></div>
             </div>
         </div>    
->>>>>>> prepro2
     </div>
     <script src="js/playing.js"></script>
     <div class="maxwd just-cont-center ds-flex">
@@ -165,15 +166,8 @@ if (isset($_POST['level'])) {
         </div>
         <div class=" ds-flex just-space-around">
             <div id="button_div">
-<<<<<<< HEAD
-                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); start()" accesskey="i">
-                    <h3>
-                        <underline class="accesskey">I</underline>NICIAR PARTIDA
-                    </h3>
-=======
                 <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); move(); start()" accesskey="i">
                     <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
->>>>>>> prepro2
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>
                     <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
