@@ -27,27 +27,39 @@ if (isset($_POST['level'])) {
 }  
 ?>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/lib.css">
-    <link rel="stylesheet" href="templates/start.css">
     <link rel="stylesheet" href="templates/general.css">
+    <link rel="stylesheet" href="templates/start.css">
     <audio id="start" src="templates/assets/audio/start.wav"></audio>
     <audio id="select" src="templates/assets/audio/select.mp3"></audio>
     <audio id="solve" src="templates/assets/audio/revelio.mp3"></audio>
+    <script src="js/colorblind.js"></script>
 </head>
-
-<body>
-    <header>
+<?php 
+    if (isset($_POST['colorblind_data'])) {
+            $_SESSION['colorblind-data'] = $_POST['colorblind_data'];
+        }
+?>
+<body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
+            echo "class = 'body-blindcolor'";
+        } else {
+            echo "class = 'body'";
+        } ?>>
+    <header id="header" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
+            echo "class = 'header-blindcolor'";
+        } else {
+            echo "class = 'header'";
+        } ?>>
         <div id="home_link_div">
             <a href="index.php" id="home_link" accesskey="h">
                 <underline class="accesskey">H</underline>OME
             </a>
         </div>
-        <div id="colorblind_button_div">
+        <div class="colorblind_button_div" title="MODO DALTÓNICO" onclick="click_colorblind()">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
         </div>
     </header>
@@ -63,7 +75,6 @@ if (isset($_POST['level'])) {
                 echo 'Jugador: ' . $_SESSION['user'];
             } else {
                 $_SESSION['user'] = $username;
-
                 echo 'Jugador: ' . $_SESSION['user'];
             }
         } else {
@@ -100,12 +111,22 @@ if (isset($_POST['level'])) {
         <script type="text/javascript">
             var segons = <?php echo $segons; ?>
         </script>
+<<<<<<< HEAD
         <div class="timer">
             <p>Tiempo: <span id="countdown"></span></p>
         </div>
+=======
+    </div>
+    <div id="timer">
+        <div id="progress">
+            <div id="bar">
+                <div id="label"></div>
+            </div>
+        </div>    
+>>>>>>> prepro2
     </div>
     <script src="js/playing.js"></script>
-    <div class=" maxwd just-cont-center ds-flex">
+    <div class="maxwd just-cont-center ds-flex">
         <div class="table">
             <?php
             
@@ -123,7 +144,7 @@ if (isset($_POST['level'])) {
 
             $cont = 0;
             //echo "<PRE>" . var_export($nivel, true) . "</PRE>";
-
+            
             echo " <table class='tg'><tbody>";
             for ($i = 1; $i <= $filas[0]; $i++) {
                 echo "<tr>";
@@ -144,10 +165,15 @@ if (isset($_POST['level'])) {
         </div>
         <div class=" ds-flex just-space-around">
             <div id="button_div">
+<<<<<<< HEAD
                 <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); start()" accesskey="i">
                     <h3>
                         <underline class="accesskey">I</underline>NICIAR PARTIDA
                     </h3>
+=======
+                <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); move(); start()" accesskey="i">
+                    <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
+>>>>>>> prepro2
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>
                     <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
@@ -155,11 +181,14 @@ if (isset($_POST['level'])) {
             </div>
         </div>
     </div>
-    <footer>
+    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
+            echo "class = 'footer-blindcolor'";
+        } else {
+            echo "class = 'footer'";
+        } ?>>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
         </div>
     </footer>
 </body>
-
 </html>

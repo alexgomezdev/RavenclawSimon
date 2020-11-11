@@ -1,0 +1,72 @@
+.tg {
+  border-collapse: collapse;
+  border-width: 5px;
+  width: 450px;
+  height: 90px;
+  background-color: white;
+  border-style: solid;
+  border-color: #222f5b;
+}
+
+#show_name {
+  color: #ffffff;
+  font-family: "Harry_Potter";
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nice {
+  background-color: #946b2d;
+}
+
+#button_div {
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.button_play {
+  border-radius: 15px;
+  background-color: #919191;
+  font-family: "Dumbledore";
+  font-size: 20px;
+  width: 20%;
+  height: 100%;
+}
+
+.button_play:hover {
+  color: #5d5d5d;
+  background-color: #ffffff;
+}
+
+.choosed {
+  background-color: aqua;
+}
+
+#timer {
+  position: relative;
+  width: 40%;
+  height: 30px;
+  background-color: #ffffff;
+}
+#bar {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: #946b2d;
+}
+#label {
+  text-align: center; /* If you want to center it */
+  line-height: 30px; /* Set the line-height to the same as the height of the progress bar container, to center it vertically */
+  color: white;
+}

@@ -1,0 +1,125 @@
+#ranking_link_div {
+  float: center;
+  padding-top: 9px;
+  text-align: center;
+  width: 65%;
+  height: 100%;
+  margin-right: none;
+}
+
+#ranking_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  width: min-content;
+  height: 70%;
+}
+
+.container {
+  display: flex;
+  margin-top: 5%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+#img_home_div {
+  padding-top: 1%;
+  text-align: right;
+  width: 48%;
+  height: 100%;
+  margin-right: 2%;
+  display: inline;
+}
+
+#img_home_blindcolor_div {
+  padding-top: 1%;
+  text-align: right;
+  width: 48%;
+  height: 100%;
+  margin-right: 2%;
+  display: none;
+}
+
+#manual {
+  color: #ffffff;
+  width: 28%;
+  height: 100%;
+  margin-left: 2%;
+  font-size: 30px;
+}
+
+#manual_paragraph {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#button_div {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+#button_play {
+  border-radius: 15px;
+  background-color: #919191;
+  font-family: "Dumbledore";
+  font-size: 20px;
+  width: 20%;
+  height: 100%;
+}
+
+#button_play:hover {
+  color: #5d5d5d;
+  background-color: #ffffff;
+}
+
+#name_introduction {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+#username {
+  height: 25px;
+  font-family: "Dumbledore";
+  font-size: 20px;
+}
+
+#games_type {
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#level_introduction {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+#level {
+  margin-top: 1%;
+  height: 25px;
+  font-family: "Dumbledore";
+  font-size: 20px;
+}
+
+.audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 70%;
+}
+
+i {
+  color: white;
+  font-size: 25px;
+}

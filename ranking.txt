@@ -1,6 +1,11 @@
-qqq;1000
-ol;1000
-ert;1550
 silviad5;4747
+<<<<<<< HEAD
 silviad5;768
 adrfa;1950
+=======
+rave;2817
+silviad5;9518
+pepito;10291
+luna;8144
+ron;973
+>>>>>>> prepro2
