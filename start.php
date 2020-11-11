@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <?php
 session_start();
+$archivo = file('templates/config.txt');
+$nivel = explode(";", $archivo[$_SESSION['lvl']]);
+$filas = explode("x", $nivel[1]);
+$randArray = [];
+$randNum = [];
+$segons = $nivel[3] * 1000;
+if (isset($_POST['level'])) {
+    $level = $_POST['level'];
+    foreach ($archivo as $arrayline){
+        $b = explode(";",$arrayline);
+        echo "<PRE>" . print_r($b, true) . "</PRE>";
+        if (in_array("AZ21",$b,true)){
+            echo "<PRE>" . print_r('Si que esta', true) . "</PRE>";
+        }
+        //if (in_array('AA11')){
+          //  $numline = array_search($arrayline, $archivo);
+                }
+        //}
+        //echo "<PRE>" . print_r($arrayline, true) . "</PRE>";    }
+}
+//header()
 ?>
 <html lang="en">
 
@@ -57,12 +78,7 @@ session_start();
         if (!isset($_SESSION['rankPoints'])) {
             $_SESSION['rankPoints'] = 1000;
         }
-        $archivo = file('templates/config.txt');
-        $nivel = explode(";", $archivo[$_SESSION['lvl']]);
-        $filas = explode("x", $nivel[1]);
-        $randArray = [];
-        $randNum = [];
-        $segons = $nivel[3] * 1000;
+        
         echo "</br>Nivel: " . $nivel[0];
         ?>
         <script type="text/javascript">
@@ -86,7 +102,8 @@ session_start();
                     array_push($randArray, $randNum);
                 }
             }
-            //echo "<PRE>" . print_r($_SESSION['lvl'], true) . "</PRE>";
+
+            // echo "<PRE>" . print_r($arrayprueba, true) . "</PRE>";
             //0. NOM, 1. MATRIU, 2. PINTAR 3. SEGS, 4.CODI 
 
             $cont = 0;
