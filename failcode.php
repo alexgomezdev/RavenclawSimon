@@ -30,14 +30,19 @@ session_start();
     </header>
     <main>
     <div id="show_error">
-        Codigo no valido, asegurate que el codigo del nivel que has puesto sea correcto
+        <p id="error">Código no valido, asegurate que el código del nivel que has puesto sea correcto</p>
     </div>
-    <div>
-    <form action="start.php">
-        <div id="level_introduction">
-            <label for="level">Código de nivel: </label><input type="text" id="level" name="level" />
-        </div>
-    </form>
+    <div ID="form_level">
+        <form action="start.php">
+            <div id="level_introduction">
+                <label for="level" id="label_level">Código de nivel: </label><input type="text" id="level" name="level" />
+                <div id="button_div">
+                <button id="button_play" accesskey="j">
+                    <h3><underline class='accesskey'>J</underline>UGAR</h3>
+                </button>
+            </div>
+            </div>
+        </form>
     </div>
     </main>
     <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
