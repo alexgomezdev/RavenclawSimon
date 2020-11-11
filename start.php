@@ -6,15 +6,17 @@ $archivo = file('templates/config.txt');
 if (isset($_POST['level'])) {
     $code = $_POST['level'];
     foreach ($archivo as $linea){
-        $pos = strpos($linea, 'BA3G') ;
-        if ($pos !==  false){
-            //echo "<PRE>" . print_r('La cadena se encontro', true) . "</PRE>";
-            $keyCode = array_search($linea, $archivo);
-            $nivel = explode(";", $archivo[$keyCode]);
-            $_SESSION['lvl'] = $keyCode;
-            unset($_POST['level']);
-            break;
-
+        if (!empty($code)){
+            $pos = strpos($linea, $code) ;
+            if ($pos !==  false){
+                //echo "<PRE>" . print_r('La cadena se encontro', true) . "</PRE>";
+                $keyCode = array_search($linea, $archivo);
+                unset($_POST['level']);
+                unset($code);
+                break;
+    
+            }
+            
         }
 
         //echo "<PRE>" . print_r($linea, true) . "</PRE>";
@@ -22,15 +24,7 @@ if (isset($_POST['level'])) {
     
 
     
-}else {
-    $nivel = explode(";", $archivo[$_SESSION['lvl']]);
-    
-}
-$filas = explode("x", $nivel[1]);
-$randArray = [];
-$randNum = [];
-$segons = $nivel[3] * 1000;
-//header()
+}  
 ?>
 <html lang="en">
 
@@ -59,6 +53,7 @@ $segons = $nivel[3] * 1000;
     </header>
     <div id="show_name">
         <?php
+        
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             if (isset($_SESSION['user']) && $_SESSION['user'] != $_POST['username']) {
@@ -76,20 +71,30 @@ $segons = $nivel[3] * 1000;
                 echo 'Jugador: ' . $_SESSION['user'];
             }
         }
-        if (isset($_SESSION['lvl'])) {
-            if (isset($_GET["do"]) && $_GET["do"] == "next") {
-                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] + 1000;
-                $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
-            } else if (isset($_GET["do"]) && $_GET["do"] == "tryagain") {
-                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] - 50;
+        if (isset($keyCode)){   
+            $_SESSION['lvl'] = $keyCode;
+            unset($keyCode);
+        }else{
+            if (isset($_SESSION['lvl'])) {
+                if (isset($_GET["do"]) && $_GET["do"] == "next") {
+                    $_SESSION['rankPoints'] = $_SESSION['rankPoints'] + 1000;
+                    $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
+                } else if (isset($_GET["do"]) && $_GET["do"] == "tryagain") {
+                    $_SESSION['rankPoints'] = $_SESSION['rankPoints'] - 50;
+                }
+            } else {
+                $_SESSION['lvl'] = 0;
             }
-        } else {
-            $_SESSION['lvl'] = 0;
         }
         if (!isset($_SESSION['rankPoints'])) {
             $_SESSION['rankPoints'] = 1000;
         }
-
+       
+        $nivel = explode(";", $archivo[$_SESSION['lvl']]);    
+        $filas = explode("x", $nivel[1]);
+        $randArray = [];
+        $randNum = [];
+        $segons = $nivel[3] * 1000;
         echo "</br>Nivel: " . $nivel[0];
         ?>
         <script type="text/javascript">
@@ -103,7 +108,7 @@ $segons = $nivel[3] * 1000;
     <div class=" maxwd just-cont-center ds-flex">
         <div class="table">
             <?php
-
+            
             for ($m = 1; $m <= $nivel[2]; $m++) {
                 $randNum = rand(0, ($filas[0] * $filas[1]) - 1);
                 if (in_array($randNum, $randArray)) {
