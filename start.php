@@ -2,25 +2,34 @@
 <?php
 session_start();
 $archivo = file('templates/config.txt');
-$nivel = explode(";", $archivo[$_SESSION['lvl']]);
-$filas = explode("x", $nivel[1]);
-$randArray = [];
-$randNum = [];
-$segons = $nivel[3] * 1000;
+
 if (isset($_POST['level'])) {
     $code = $_POST['level'];
     foreach ($archivo as $linea){
-        $pos = strpos($linea, 'AA11') ;
+        $pos = strpos($linea, 'BA3G') ;
         if ($pos !==  false){
-            echo "<PRE>" . print_r('La cadena se encontro', true) . "</PRE>";
-            $keyCode = array_search('AA11', $)
+            //echo "<PRE>" . print_r('La cadena se encontro', true) . "</PRE>";
+            $keyCode = array_search($linea, $archivo);
+            $nivel = explode(";", $archivo[$keyCode]);
+            $_SESSION['lvl'] = $keyCode;
+            unset($_POST['level']);
             break;
+
         }
 
         //echo "<PRE>" . print_r($linea, true) . "</PRE>";
     }
     
+
+    
+}else {
+    $nivel = explode(";", $archivo[$_SESSION['lvl']]);
+    
 }
+$filas = explode("x", $nivel[1]);
+$randArray = [];
+$randNum = [];
+$segons = $nivel[3] * 1000;
 //header()
 ?>
 <html lang="en">
