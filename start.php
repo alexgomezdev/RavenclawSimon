@@ -26,7 +26,7 @@ if (isset($_POST['level'])) {
 <html lang="en">
 
 <head>
-       <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/lib.css">
@@ -40,7 +40,9 @@ if (isset($_POST['level'])) {
 <body>
     <header>
         <div id="home_link_div">
-            <a href="index.php" id="home_link" accesskey="h"><underline class="accesskey">H</underline>OME</a>
+            <a href="index.php" id="home_link" accesskey="h">
+                <underline class="accesskey">H</underline>OME
+            </a>
         </div>
         <div id="colorblind_button_div">
             <img src="templates/assets/icono_daltonico.png" alt="Modo daltónico" id="colorblind_icon">
@@ -66,7 +68,7 @@ if (isset($_POST['level'])) {
             }
         }
         if (isset($_SESSION['lvl'])) {
-            if ( isset($_GET["do"]) && $_GET["do"] == "next") {
+            if (isset($_GET["do"]) && $_GET["do"] == "next") {
                 $_SESSION['rankPoints'] = $_SESSION['rankPoints'] + 1000;
                 $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
             } else if (isset($_GET["do"]) && $_GET["do"] == "tryagain") {
@@ -78,14 +80,13 @@ if (isset($_POST['level'])) {
         if (!isset($_SESSION['rankPoints'])) {
             $_SESSION['rankPoints'] = 1000;
         }
-        
+
         echo "</br>Nivel: " . $nivel[0];
         ?>
         <script type="text/javascript">
             var segons = <?php echo $segons; ?>
-            
         </script>
-         <div class="timer">
+        <div class="timer">
             <p>Tiempo: <span id="countdown"></span></p>
         </div>
     </div>
@@ -127,10 +128,12 @@ if (isset($_POST['level'])) {
             //echo "<PRE>" . print_r($filas, true) . "</PRE>";
             ?>
         </div>
-               <div class=" ds-flex just-space-around">
+        <div class=" ds-flex just-space-around">
             <div id="button_div">
                 <button class="button_play" id="start_game_button" onclick="showNices(); updateClock(); start()" accesskey="i">
-                    <h3><underline class="accesskey">I</underline>NICIAR PARTIDA</h3>
+                    <h3>
+                        <underline class="accesskey">I</underline>NICIAR PARTIDA
+                    </h3>
                 </button>
                 <button class="button_play" id="solve_button" onclick="winorlose()" onmouseover="solve()" accesskey="s" disabled>
                     <h3>RE<underline class="accesskey">S</underline>OLVER</h3>
