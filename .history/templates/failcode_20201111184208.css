@@ -59,37 +59,5 @@
 @media (max-width: 800px) {
   #show_error {
     margin-top: 200px;
-    font-size: 35px;
-  }
-  #label_level {
-    font-size: 30px;
-  }
-  #level {
-    font-size: 30px;
-  }
-  #button_play {
-    font-size: 15px;
-  }
-  #footer_content {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 375px) {
-  #show_error {
-    margin-top: 200px;
-    font-size: 25px;
-  }
-  #label_level {
-    font-size: 25px;
-  }
-  #level {
-    font-size: 25px;
-  }
-  #button_play {
-    font-size: 10px;
-  }
-  #footer_content {
-    font-size: 12px;
   }
 }

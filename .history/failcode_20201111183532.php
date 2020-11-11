@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <?php
+//prueba
 session_start();
 ?>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/failcode.css">

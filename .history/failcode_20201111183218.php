@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <?php
+//prueba
 session_start();
 ?>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw Simon</title>
     <link rel="stylesheet" href="templates/general.css">
     <link rel="stylesheet" href="templates/failcode.css">
@@ -30,15 +30,15 @@ session_start();
     </header>
     <main>
     <div id="show_error">
-        <p id="error">Código no válido, asegurate que el código del nivel que has puesto sea correcto</p>
+        <p id="error">Código no valido, asegurate que el código del nivel que has puesto sea correcto</p>
     </div>
     <div ID="form_level">
         <form action="start.php">
             <div id="level_introduction">
                 <label for="level" id="label_level">Código de nivel: </label><input type="text" id="level" name="level" />
                 <div id="button_div">
-                <button id="button_play" accesskey="g">
-                    <h3>JU<underline class='accesskey'>G</underline>AR</h3>
+                <button id="button_play" accesskey="j">
+                    <h3><underline class='accesskey'>J</underline>UGAR</h3>
                 </button>
             </div>
             </div>

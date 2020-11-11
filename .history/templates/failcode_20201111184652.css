@@ -64,9 +64,6 @@
   #label_level {
     font-size: 30px;
   }
-  #level {
-    font-size: 30px;
-  }
   #button_play {
     font-size: 15px;
   }
@@ -83,13 +80,10 @@
   #label_level {
     font-size: 25px;
   }
-  #level {
-    font-size: 25px;
-  }
   #button_play {
-    font-size: 10px;
+    font-size: 15px;
   }
   #footer_content {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
