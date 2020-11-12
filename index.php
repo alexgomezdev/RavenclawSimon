@@ -12,6 +12,7 @@ session_start();
     <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
     <audio id="start" src="templates/assets/audio/Harry potter.mp3" autoplay></audio>
     <script src="js/colorblind_home.js"></script>
+    <script src="js/survival.js"></script>
 </head>
 <body id="body" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
             echo "class = 'body-blindcolor'";
@@ -59,7 +60,7 @@ session_start();
                 </p>
             </div>
         </div>
-        <form method="POST" action="start.php">
+        <form id="form_index" method="POST" action="start.php">
             <div id="name_introduction">
                 <?php
                 if (isset($_SESSION['user'])) {
@@ -76,7 +77,7 @@ session_start();
             <div id="games_type">
                 <input type="checkbox" class="checkbox" id="lier" name="lier">
                 <label for="lier" title="Modo mentiroso">MODO IMPOSTORUS</label>
-                <input type="checkbox" class="checkbox" id="survive" name="survive">
+                <input type="checkbox" onclick="survival_mode()" class="checkbox" id="survive" name="survive">
                 <label for="survive" title="Modo supervivencia">MODO HORROCRUX</label>
             </div>
             <div id="button_div">
