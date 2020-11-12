@@ -17,6 +17,9 @@
   margin-top: 120px;
   margin-bottom: 20px;
 }
+span {
+  margin-bottom: 10px;
+}
 
 #harry {
   font-size: 40px;
@@ -52,9 +55,6 @@ table {
 .button_play:hover {
   color: #5d5d5d;
   background-color: #ffffff;
-}
-p {
-  font-size: 40px;
 }
 
 #timer {

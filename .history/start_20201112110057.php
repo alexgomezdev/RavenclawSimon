@@ -5,6 +5,7 @@ if (isset($_POST['lier'])){
 }
 session_start();
 $archivo = file('templates/config.txt');
+
 if (isset($_POST['level'])) {
     $code = $_POST['level'];
     foreach ($archivo as $linea){
@@ -19,7 +20,8 @@ if (isset($_POST['level'])) {
             }
         }
         //echo "<PRE>" . print_r($linea, true) . "</PRE>";
-    }  
+    }
+    
 }  
 ?>
 <html lang="en">

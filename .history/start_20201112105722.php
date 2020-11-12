@@ -5,6 +5,7 @@ if (isset($_POST['lier'])){
 }
 session_start();
 $archivo = file('templates/config.txt');
+
 if (isset($_POST['level'])) {
     $code = $_POST['level'];
     foreach ($archivo as $linea){
@@ -19,7 +20,8 @@ if (isset($_POST['level'])) {
             }
         }
         //echo "<PRE>" . print_r($linea, true) . "</PRE>";
-    }  
+    }
+    
 }  
 ?>
 <html lang="en">
@@ -74,7 +76,7 @@ if (isset($_POST['level'])) {
                 echo 'Jugador: ' . $_SESSION['user'];
                 if ($username == 'Harry' && !isset($harryValidation)){
                     $harryValidation = 1;
-                    echo '<br><span id="harry">¡Por las barbas de Merlin! Tenemos aqui a Harry, toma 1000 zafiros extra.</span>';
+                    echo '<br>¡Por las barbas de Merlin! Tenemos aqui a Harry, toma 1000 zafiros extra.';
                 }
             }
         } else {

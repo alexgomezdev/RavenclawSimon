@@ -53,14 +53,11 @@ table {
   color: #5d5d5d;
   background-color: #ffffff;
 }
-p {
-  font-size: 40px;
-}
 
 #timer {
   text-align: center;
   margin-top: 2%;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Harry_Potter";
   color: white;
   width: 100%;

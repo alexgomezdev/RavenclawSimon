@@ -1,5 +1,6 @@
 var daltonico = 0;
 
+
 function click_colorblind() {
     if (daltonico == 0) {
         daltonico = 1;
