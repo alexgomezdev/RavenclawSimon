@@ -1,0 +1,56 @@
+.container {
+  text-align: center;
+  color: white;
+  display: flex;
+  margin-top: 5%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+  width: 100%;
+  align-content: center;
+}
+
+#table {
+  margin: 0 auto;
+  align-self: center;
+  width: 50%;
+  height: fit-content;
+}
+
+caption {
+  font-size: 25px;
+  margin-top: 20%;
+  margin-bottom: 15%;
+}
+
+#row_head {
+  background-color: #946b2d;
+  font-size: 20px;
+}
+
+tr {
+  background-color: #0e1a40;
+}
+
+th {
+  height: 60px;
+}
+
+td {
+  font-size: 20px;
+  height: 50px;
+}
+
+#sapphire {
+  vertical-align: text-bottom;
+  width: 27px;
+  height: 25px;
+}
+.colorblind_button_div {
+  width: 90%;
+}
+
+@media (max-width: 700px) {
+  #table {
+    width: 65%;
+  }
+}

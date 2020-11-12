@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Dumbledore";
+  src: url("../templates/typography/dumbledor.1.ttf") format("truetype");
+}
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+main {
+  text-align: center;
+  height: 100%;
+}
+
+#show_name {
+  color: #ffffff;
+  font-family: "Harry_Potter";
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 190px;
+}
+
+#button_div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.button_play {
+  border-radius: 15px;
+  background-color: #919191;
+  font-family: "Dumbledore";
+  font-size: 20px;
+  width: 15%;
+  height: 100%;
+}
+
+.button_play:hover {
+  color: #5d5d5d;
+  background-color: #ffffff;
+}
+
+#scroll {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: white;
+  margin-bottom: 50px;
+}
+
+#code {
+  margin-top: 100px;
+  font-family: "Dumbledore";
+  font-size: 25px;
+  user-select: none;
+  color: white;
+}
+
+span {
+  display: inline-block;
+  text-shadow: 0 0 0 #000000;
+  animation: smoky 15s 1s both;
+  font-size: 100px;
+  color: #ff3333;
+  font-weight: bold;
+}
+
+span:nth-child(even) {
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg)
+      scale(0.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg)
+      scale(0);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@for $item from 1 through 21 {
+  span:nth-of-type(#{$item}) {
+    animation-delay: #{(3 + ($item/10))}s;
+  }
+}
+
+.colorblind_button_div {
+  width: 90%;
+}
+/* 
+#colorblind_icon {
+  position: absolute;
+  
+} */
+
+@media (max-width: 2400px) {
+  #scroll {
+    margin-top: 10%;
+  }
+  #button_div {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .button_play {
+    width: 20%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #show_name {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  .button_play {
+    width: 25%;
+  }
+}
+
+@media (max-width: 750px) {
+  #show_name {
+    font-size: 45px;
+  }
+  span {
+    font-size: 80px;
+  }
+  .button_play {
+    width: 30%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 620px) {
+  .button_play {
+    width: 50%;
+    margin: 3px;
+  }
+  p {
+    font-size: 20px;
+  }
+  #footer_content {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  span {
+    font-size: 60px;
+  }
+  .button_play {
+    font-size: 10px;
+  }
+  #button_div {
+    margin-top: 15%;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 450px) {
+  span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  #footer_content {
+    font-size: 12px;
+  }
+}
