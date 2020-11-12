@@ -79,6 +79,10 @@ if (isset($_POST['level'])) {
             } else {
                 $_SESSION['user'] = $username;
                 echo 'Jugador: ' . $_SESSION['user'];
+                if ($username == 'Harry' && !isset($harryValidation)){
+                    $harryValidation = 1;
+                    echo '<br>Por las barbas de Merlin!, tenemos aqui a harry, toma 1000 zafiros extra.';
+                }
             }
         } else {
             if (isset($_SESSION['user'])) {
@@ -101,7 +105,12 @@ if (isset($_POST['level'])) {
             }
         }
         if (!isset($_SESSION['rankPoints'])) {
-            $_SESSION['rankPoints'] = 1000;
+            if (isset($_SESSION['user']) && isset($_SESSION['$harryValidation']) && $harryValidation == 1 ){
+                $_SESSION['rankPoints'] = $_SESSION['rankPoints'] = $_SESSION['rankPoints'] + 1000;
+                $harryValidation = 2;
+            }else{
+                $_SESSION['rankPoints'] = 1000;
+            }
         }
        
         $nivel = explode(";", $archivo[$_SESSION['lvl']]);    
@@ -113,7 +122,6 @@ if (isset($_POST['level'])) {
         ?>
         <script type="text/javascript">
             var segons = <?php echo $segons; ?>
-            var lier = <?php echo $lier; ?>
         </script>
         <div class="timer">
             <p>Tiempo: <span id="countdown"></span></p>

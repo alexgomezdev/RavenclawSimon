@@ -43,6 +43,9 @@
                     <?php
                         if (isset($_GET["do"]) && $_GET["do"] == "save"){
                             if (isset($_SESSION['user']) && isset($_SESSION['rankPoints']) ){
+                                if (isset($_SESSION['lvl'])){
+                                    $_SESSION['lvl'] = $_SESSION['lvl'] + 1;
+                                }
                                 $rankToWrite = fopen('ranking.txt',"a");
                                 $toWrite=htmlspecialchars($_SESSION['user']).";".$_SESSION['rankPoints']."\r\n";
                                 fwrite($rankToWrite,$toWrite);
