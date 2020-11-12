@@ -23,3 +23,15 @@
 
 - Hemos tenido problemas con el control de versiones, lo cual nos ha hecho perder tiempo para volver a engancharnos al trabajo. 
 - Se han añadido aclaraciones de las especificaciones a última hora. 
+
+## SPRINT 3
+### A FAVOR:
+
+- Hemos consensuado muy rápido y fácilmente todos los aspectos del sprint.
+
+### EN CONTRA:
+
+- Han habido problemas de comunicación entre los miembros del equipo. 
+- La estiamción de las horas no ha sido correcta en algunas especificaciones.
+- No se ha gestionado de forma correcta la disponibilidad de los diferentes miembros del equipo, por lo que ha faltado 
+completar alguna especificación.
