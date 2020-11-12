@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <?php
 session_start();
+if (isset($_POST['username'])) {
+    $username = $_POST['username'];
+    if (isset($_SESSION['user']) && $_SESSION['user'] != $_POST['username']) {
+        session_unset();
+    }
+}
 if (isset($_POST['lier'])){
     if (!isset($_SESSION['mode'])){
         $_SESSION['mode'] = 1;
+        unset($_POST['lier']);
     }
 }else {
     if (isset($_SESSION['mode'])){
@@ -72,9 +79,6 @@ if (isset($_POST['level'])) {
         
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
-            if (isset($_SESSION['user']) && $_SESSION['user'] != $_POST['username']) {
-                session_unset();
-            }
             if (isset($_SESSION['user'])) {
                 echo 'Jugador: ' . $_SESSION['user'];
             } else {
