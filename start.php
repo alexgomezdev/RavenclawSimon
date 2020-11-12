@@ -183,10 +183,10 @@ if (isset($_POST['level'])) {
             </div>
         </div>
     </div>
-    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "False") {
-            echo "class = 'footer'";
-        } else {
+    <footer id="footer" <?php if (isset($_SESSION['colorblind-data']) && $_SESSION['colorblind-data'] == "True") {
             echo "class = 'footer-blindcolor'";
+        } else {
+            echo "class = 'footer'";
         } ?>>
         <div id="footer_content">
             &#0169 2020 - Creado por: Silvia de la Cruz, Álex Gomez e Iker Cayero
