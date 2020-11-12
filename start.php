@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <?php
-if (isset($_POST['lier'])){
-    $lier = 1;
-}
 session_start();
+if (isset($_POST['lier'])){
+    if (!isset($_SESSION['mode'])){
+        $_SESSION['mode'] = 1;
+    }
+}else {
+    if (isset($_SESSION['mode'])){
+        $_SESSION['mode'] = 1;
+    }else{
+        $_SESSION['mode'] = 0;
+    }
+}
 $archivo = file('templates/config.txt');
 
 if (isset($_POST['level'])) {
@@ -120,6 +128,9 @@ if (isset($_POST['level'])) {
         $segons = $nivel[3] * 1000;
         echo "</br>Nivel: " . $nivel[0];
         ?>
+         <script type="text/javascript">
+            var lier = <?php echo $_SESSION['mode']; ?>
+        </script>
         <script type="text/javascript">
             var segons = <?php echo $segons; ?>
         </script>

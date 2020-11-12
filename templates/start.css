@@ -26,7 +26,9 @@ table {
 .nice {
   background-color: #946b2d;
 }
-
+.lier {
+  background-color: #d60b0b;
+}
 #button_div {
   display: inline-block;
   margin-top: 50px;
